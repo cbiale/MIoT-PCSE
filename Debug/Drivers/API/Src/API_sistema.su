@@ -1,0 +1,2 @@
+../Drivers/API/Src/API_sistema.c:10:6:sistema_iniciar	8	static
+../Drivers/API/Src/API_sistema.c:21:6:sistema_actualizar	8	static

@@ -1,0 +1,223 @@
+\doxysection{Referencia del archivo Drivers/\+API/\+Src/\+API\+\_\+interfaz.c}
+\hypertarget{API__interfaz_8c}{}\label{API__interfaz_8c}\index{Drivers/API/Src/API\_interfaz.c@{Drivers/API/Src/API\_interfaz.c}}
+{\ttfamily \#include $<$API\+\_\+interfaz.\+h$>$}\newline
+\doxysubsubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structestado__interno__t}{estado\+\_\+interno\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Estructura que representa el estado interno de la interfaz en el sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{API__interfaz_8c_ac858624c5a310f6c15d272022b989f28}{SIN\+\_\+\+DATOS}}~-\/1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumeraciones}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{API__interfaz_8c_a54760ab652c4b61c5d1da3f94a16d822}{estado\+\_\+sistema\+\_\+t}} \{ \mbox{\hyperlink{API__interfaz_8c_a54760ab652c4b61c5d1da3f94a16d822a2557c212d7c88a401a4e370c5c2e31b0}{MOSTRANDO\+\_\+\+DATOS}}
+, \mbox{\hyperlink{API__interfaz_8c_a54760ab652c4b61c5d1da3f94a16d822ac5407867119a2116986872c7311b2420}{DESCANSO}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeración que representa los estados de la interfaz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{API__interfaz_8c_ac0c7a235c74c741a8a60c1cb3d0931dd}{iniciar\+\_\+mostrar\+\_\+datos}} ()
+\begin{DoxyCompactList}\small\item\em Muestra los datos iniciales en el lcd en el estado MOSTRANDO\+\_\+\+DATOS. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{API__interfaz_8c_abf6e3e73f85454bfbdcd0d1c5cff675b}{mostrar\+\_\+datos}} (bool mostrar\+\_\+lcd, bool mostrar\+\_\+uart, bool forzar\+\_\+lectura)
+\begin{DoxyCompactList}\small\item\em Muestra los datos según las opciones especificadas. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{API__interfaz_8c_a8fa83fa89d13d249147df3a5bf03f8a8}{mostrar\+\_\+datos\+\_\+lcd}} ()
+\begin{DoxyCompactList}\small\item\em Muestra los datos en un LCD. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{API__interfaz_8c_a97bda7bd73b9fc473c298707f4c4ba87}{mostrar\+\_\+datos\+\_\+uart}} ()
+\begin{DoxyCompactList}\small\item\em Muestra los datos a través de UART. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{API__interfaz_8c_a133caa605050ff0c093d6600b8280540}{descansar}} ()
+\begin{DoxyCompactList}\small\item\em Muestra los datos que se visualizan en el lcd en el estado DESCANSAR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__interfaz_8c_a59aa9c327f8c0beeae9de10b2effb30f}{interfaz\+\_\+iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Inicia la interfaz de usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__interfaz_8c_acde8e2cdadec0ddcb8353dfa9511ba59}{interfaz\+\_\+actualizar}} ()
+\begin{DoxyCompactList}\small\item\em Actualiza la interfaz de usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{API__interfaz_8c_a54760ab652c4b61c5d1da3f94a16d822}{estado\+\_\+sistema\+\_\+t}} \mbox{\hyperlink{API__interfaz_8c_aa1287a21386d96d7642f77104ca57c05}{estado}}
+\item 
+static \mbox{\hyperlink{structestado__interno__t}{estado\+\_\+interno\+\_\+t}} \mbox{\hyperlink{API__interfaz_8c_a8730946f312108f952e841e6a0558134}{estado\+\_\+interno}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de «define»}
+\Hypertarget{API__interfaz_8c_ac858624c5a310f6c15d272022b989f28}\label{API__interfaz_8c_ac858624c5a310f6c15d272022b989f28} 
+\index{API\_interfaz.c@{API\_interfaz.c}!SIN\_DATOS@{SIN\_DATOS}}
+\index{SIN\_DATOS@{SIN\_DATOS}!API\_interfaz.c@{API\_interfaz.c}}
+\doxysubsubsection{\texorpdfstring{SIN\_DATOS}{SIN\_DATOS}}
+{\footnotesize\ttfamily \#define SIN\+\_\+\+DATOS~-\/1}
+
+
+
+\doxysubsection{Documentación de enumeraciones}
+\Hypertarget{API__interfaz_8c_a54760ab652c4b61c5d1da3f94a16d822}\label{API__interfaz_8c_a54760ab652c4b61c5d1da3f94a16d822} 
+\index{API\_interfaz.c@{API\_interfaz.c}!estado\_sistema\_t@{estado\_sistema\_t}}
+\index{estado\_sistema\_t@{estado\_sistema\_t}!API\_interfaz.c@{API\_interfaz.c}}
+\doxysubsubsection{\texorpdfstring{estado\_sistema\_t}{estado\_sistema\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{API__interfaz_8c_a54760ab652c4b61c5d1da3f94a16d822}{estado\+\_\+sistema\+\_\+t}}}
+
+
+
+Enumeración que representa los estados de la interfaz. 
+
+Define los posibles estados que incluyen "{}\+MOSTRANDO\+\_\+\+DATOS"{} y "{}\+DESCANSO"{}. \begin{DoxyEnumFields}{Valores de enumeraciones}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOSTRANDO\_DATOS@{MOSTRANDO\_DATOS}!API\_interfaz.c@{API\_interfaz.c}}\index{API\_interfaz.c@{API\_interfaz.c}!MOSTRANDO\_DATOS@{MOSTRANDO\_DATOS}}}\Hypertarget{API__interfaz_8c_a54760ab652c4b61c5d1da3f94a16d822a2557c212d7c88a401a4e370c5c2e31b0}\label{API__interfaz_8c_a54760ab652c4b61c5d1da3f94a16d822a2557c212d7c88a401a4e370c5c2e31b0} 
+MOSTRANDO\+\_\+\+DATOS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DESCANSO@{DESCANSO}!API\_interfaz.c@{API\_interfaz.c}}\index{API\_interfaz.c@{API\_interfaz.c}!DESCANSO@{DESCANSO}}}\Hypertarget{API__interfaz_8c_a54760ab652c4b61c5d1da3f94a16d822ac5407867119a2116986872c7311b2420}\label{API__interfaz_8c_a54760ab652c4b61c5d1da3f94a16d822ac5407867119a2116986872c7311b2420} 
+DESCANSO&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{API__interfaz_8c_a133caa605050ff0c093d6600b8280540}\label{API__interfaz_8c_a133caa605050ff0c093d6600b8280540} 
+\index{API\_interfaz.c@{API\_interfaz.c}!descansar@{descansar}}
+\index{descansar@{descansar}!API\_interfaz.c@{API\_interfaz.c}}
+\doxysubsubsection{\texorpdfstring{descansar()}{descansar()}}
+{\footnotesize\ttfamily static void descansar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Muestra los datos que se visualizan en el lcd en el estado DESCANSAR. 
+
+Esta función muestra los datos que se visualizan en el lcd en el estado DESCANSAR.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__interfaz_8c_ac0c7a235c74c741a8a60c1cb3d0931dd}\label{API__interfaz_8c_ac0c7a235c74c741a8a60c1cb3d0931dd} 
+\index{API\_interfaz.c@{API\_interfaz.c}!iniciar\_mostrar\_datos@{iniciar\_mostrar\_datos}}
+\index{iniciar\_mostrar\_datos@{iniciar\_mostrar\_datos}!API\_interfaz.c@{API\_interfaz.c}}
+\doxysubsubsection{\texorpdfstring{iniciar\_mostrar\_datos()}{iniciar\_mostrar\_datos()}}
+{\footnotesize\ttfamily static void iniciar\+\_\+mostrar\+\_\+datos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Muestra los datos iniciales en el lcd en el estado MOSTRANDO\+\_\+\+DATOS. 
+
+Esta función muestra los datos iniciales en el lcd, los cuales no cambian constantemente. Se usa en el estado MOSTRANDO\+\_\+\+DATOS.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__interfaz_8c_acde8e2cdadec0ddcb8353dfa9511ba59}\label{API__interfaz_8c_acde8e2cdadec0ddcb8353dfa9511ba59} 
+\index{API\_interfaz.c@{API\_interfaz.c}!interfaz\_actualizar@{interfaz\_actualizar}}
+\index{interfaz\_actualizar@{interfaz\_actualizar}!API\_interfaz.c@{API\_interfaz.c}}
+\doxysubsubsection{\texorpdfstring{interfaz\_actualizar()}{interfaz\_actualizar()}}
+{\footnotesize\ttfamily void interfaz\+\_\+actualizar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Actualiza la interfaz de usuario. 
+
+Realiza las operaciones necesarias para actualizar la interfaz de usuario. Esto incluye la actualización de elementos visuales.
+
+\begin{DoxyReturn}{Devuelve}
+void Ejemplo de uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{API__interfaz_8h_acde8e2cdadec0ddcb8353dfa9511ba59}{interfaz\_actualizar}}();}
+
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\Hypertarget{API__interfaz_8c_a59aa9c327f8c0beeae9de10b2effb30f}\label{API__interfaz_8c_a59aa9c327f8c0beeae9de10b2effb30f} 
+\index{API\_interfaz.c@{API\_interfaz.c}!interfaz\_iniciar@{interfaz\_iniciar}}
+\index{interfaz\_iniciar@{interfaz\_iniciar}!API\_interfaz.c@{API\_interfaz.c}}
+\doxysubsubsection{\texorpdfstring{interfaz\_iniciar()}{interfaz\_iniciar()}}
+{\footnotesize\ttfamily void interfaz\+\_\+iniciar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia la interfaz de usuario. 
+
+Esta función se encarga de realizar las operaciones necesarias para iniciar la interfaz de usuario.
+
+\begin{DoxyReturn}{Devuelve}
+void
+\end{DoxyReturn}
+\begin{DoxyNote}{Nota}
+Asegúrate de llamar a esta función antes de comenzar cualquier operación en la interfaz de usuario. 
+
+Debe llamarse luego de inicializar los periféricos de la aplicación.
+\end{DoxyNote}
+Ejemplo de uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{API__interfaz_8h_a59aa9c327f8c0beeae9de10b2effb30f}{interfaz\_iniciar}}();}
+
+\end{DoxyCode}
+ \Hypertarget{API__interfaz_8c_abf6e3e73f85454bfbdcd0d1c5cff675b}\label{API__interfaz_8c_abf6e3e73f85454bfbdcd0d1c5cff675b} 
+\index{API\_interfaz.c@{API\_interfaz.c}!mostrar\_datos@{mostrar\_datos}}
+\index{mostrar\_datos@{mostrar\_datos}!API\_interfaz.c@{API\_interfaz.c}}
+\doxysubsubsection{\texorpdfstring{mostrar\_datos()}{mostrar\_datos()}}
+{\footnotesize\ttfamily static void mostrar\+\_\+datos (\begin{DoxyParamCaption}\item[{bool}]{mostrar\+\_\+lcd,  }\item[{bool}]{mostrar\+\_\+uart,  }\item[{bool}]{forzar\+\_\+lectura }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Muestra los datos según las opciones especificadas. 
+
+Esta función muestra los datos en dispositivos como LCD y UART, según las opciones proporcionadas. También permite forzar una nueva lectura si se especifica.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mostrar\+\_\+lcd} & Indica si se deben mostrar los datos en un LCD. \\
+\hline
+{\em mostrar\+\_\+uart} & Indica si se deben mostrar los datos a través de UART. \\
+\hline
+{\em forzar\+\_\+lectura} & Indica si se debe forzar una nueva lectura antes de mostrar los datos.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__interfaz_8c_a8fa83fa89d13d249147df3a5bf03f8a8}\label{API__interfaz_8c_a8fa83fa89d13d249147df3a5bf03f8a8} 
+\index{API\_interfaz.c@{API\_interfaz.c}!mostrar\_datos\_lcd@{mostrar\_datos\_lcd}}
+\index{mostrar\_datos\_lcd@{mostrar\_datos\_lcd}!API\_interfaz.c@{API\_interfaz.c}}
+\doxysubsubsection{\texorpdfstring{mostrar\_datos\_lcd()}{mostrar\_datos\_lcd()}}
+{\footnotesize\ttfamily static void mostrar\+\_\+datos\+\_\+lcd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Muestra los datos en un LCD. 
+
+Esta función se encarga de mostrar los datos en un LCD.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__interfaz_8c_a97bda7bd73b9fc473c298707f4c4ba87}\label{API__interfaz_8c_a97bda7bd73b9fc473c298707f4c4ba87} 
+\index{API\_interfaz.c@{API\_interfaz.c}!mostrar\_datos\_uart@{mostrar\_datos\_uart}}
+\index{mostrar\_datos\_uart@{mostrar\_datos\_uart}!API\_interfaz.c@{API\_interfaz.c}}
+\doxysubsubsection{\texorpdfstring{mostrar\_datos\_uart()}{mostrar\_datos\_uart()}}
+{\footnotesize\ttfamily static void mostrar\+\_\+datos\+\_\+uart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Muestra los datos a través de UART. 
+
+Esta función se encarga de mostrar los datos a través de la interfaz UART.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{API__interfaz_8c_aa1287a21386d96d7642f77104ca57c05}\label{API__interfaz_8c_aa1287a21386d96d7642f77104ca57c05} 
+\index{API\_interfaz.c@{API\_interfaz.c}!estado@{estado}}
+\index{estado@{estado}!API\_interfaz.c@{API\_interfaz.c}}
+\doxysubsubsection{\texorpdfstring{estado}{estado}}
+{\footnotesize\ttfamily \mbox{\hyperlink{API__interfaz_8c_a54760ab652c4b61c5d1da3f94a16d822}{estado\+\_\+sistema\+\_\+t}} estado\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{API__interfaz_8c_a8730946f312108f952e841e6a0558134}\label{API__interfaz_8c_a8730946f312108f952e841e6a0558134} 
+\index{API\_interfaz.c@{API\_interfaz.c}!estado\_interno@{estado\_interno}}
+\index{estado\_interno@{estado\_interno}!API\_interfaz.c@{API\_interfaz.c}}
+\doxysubsubsection{\texorpdfstring{estado\_interno}{estado\_interno}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structestado__interno__t}{estado\+\_\+interno\+\_\+t}} estado\+\_\+interno\hspace{0.3cm}{\ttfamily [static]}}
+

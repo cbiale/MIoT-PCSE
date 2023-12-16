@@ -1,0 +1,123 @@
+\doxysection{Referencia del archivo Drivers/\+API/\+Inc/\+API\+\_\+uart.h}
+\hypertarget{API__uart_8h}{}\label{API__uart_8h}\index{Drivers/API/Inc/API\_uart.h@{Drivers/API/Inc/API\_uart.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include "{}port.\+h"{}}\newline
+\doxysubsubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef bool \mbox{\hyperlink{API__uart_8h_a2b21255bd7f7192db778983b15089208}{bool\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Tipo de datos que define un valor lógico. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{API__delay_8h_a2b21255bd7f7192db778983b15089208}{bool\+\_\+t}} \mbox{\hyperlink{API__uart_8h_a0d0d1729b247ca7932b836a48e45b6b6}{uart\+\_\+iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Inicia la UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__uart_8h_aec0f5bb7e6bdf17e7edef5ee20c0acea}{uart\+\_\+enviar\+\_\+string}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}pstring)
+\begin{DoxyCompactList}\small\item\em Transfiere una cadena de texto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__uart_8h_afa4dc471f073e01bf91b980cedad0427}{uart\+\_\+enviar\+\_\+string\+\_\+tamano}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}pstring, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Transfiere una cadena de texto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__uart_8h_a800b571054b16acaaead12913d453ca6}{uart\+\_\+recibir\+\_\+string\+\_\+tamano}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}pstring, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Recepciona datos y los almacena en una cadena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de «typedef»}
+\Hypertarget{API__uart_8h_a2b21255bd7f7192db778983b15089208}\label{API__uart_8h_a2b21255bd7f7192db778983b15089208} 
+\index{API\_uart.h@{API\_uart.h}!bool\_t@{bool\_t}}
+\index{bool\_t@{bool\_t}!API\_uart.h@{API\_uart.h}}
+\doxysubsubsection{\texorpdfstring{bool\_t}{bool\_t}}
+{\footnotesize\ttfamily typedef bool \mbox{\hyperlink{API__delay_8h_a2b21255bd7f7192db778983b15089208}{bool\+\_\+t}}}
+
+
+
+Tipo de datos que define un valor lógico. 
+
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{API__uart_8h_aec0f5bb7e6bdf17e7edef5ee20c0acea}\label{API__uart_8h_aec0f5bb7e6bdf17e7edef5ee20c0acea} 
+\index{API\_uart.h@{API\_uart.h}!uart\_enviar\_string@{uart\_enviar\_string}}
+\index{uart\_enviar\_string@{uart\_enviar\_string}!API\_uart.h@{API\_uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_enviar\_string()}{uart\_enviar\_string()}}
+{\footnotesize\ttfamily void uart\+\_\+enviar\+\_\+string (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{pstring }\end{DoxyParamCaption})}
+
+
+
+Transfiere una cadena de texto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Puntero} & a la cadena de texto a transferir\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{API__uart_8h_afa4dc471f073e01bf91b980cedad0427}\label{API__uart_8h_afa4dc471f073e01bf91b980cedad0427} 
+\index{API\_uart.h@{API\_uart.h}!uart\_enviar\_string\_tamano@{uart\_enviar\_string\_tamano}}
+\index{uart\_enviar\_string\_tamano@{uart\_enviar\_string\_tamano}!API\_uart.h@{API\_uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_enviar\_string\_tamano()}{uart\_enviar\_string\_tamano()}}
+{\footnotesize\ttfamily void uart\+\_\+enviar\+\_\+string\+\_\+tamano (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{pstring,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Transfiere una cadena de texto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Puntero} & a la cadena de texto a transferir \\
+\hline
+{\em Largo} & máximo que puede tener la cadena de texto a transferir\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{API__uart_8h_a0d0d1729b247ca7932b836a48e45b6b6}\label{API__uart_8h_a0d0d1729b247ca7932b836a48e45b6b6} 
+\index{API\_uart.h@{API\_uart.h}!uart\_iniciar@{uart\_iniciar}}
+\index{uart\_iniciar@{uart\_iniciar}!API\_uart.h@{API\_uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_iniciar()}{uart\_iniciar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{API__delay_8h_a2b21255bd7f7192db778983b15089208}{bool\+\_\+t}} uart\+\_\+iniciar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia la UART. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Ninguno} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em Ninguno} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{API__uart_8h_a800b571054b16acaaead12913d453ca6}\label{API__uart_8h_a800b571054b16acaaead12913d453ca6} 
+\index{API\_uart.h@{API\_uart.h}!uart\_recibir\_string\_tamano@{uart\_recibir\_string\_tamano}}
+\index{uart\_recibir\_string\_tamano@{uart\_recibir\_string\_tamano}!API\_uart.h@{API\_uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_recibir\_string\_tamano()}{uart\_recibir\_string\_tamano()}}
+{\footnotesize\ttfamily void uart\+\_\+recibir\+\_\+string\+\_\+tamano (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{pstring,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Recepciona datos y los almacena en una cadena. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Puntero} & donde se almacenan los datos recepcionados \\
+\hline
+{\em Largo} & máximo de datos a recepcionar\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Final: Referencia del archivo Drivers/API/Inc/API_sensor_fake.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Proyecto Final<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">PMC - Práctica 3</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_9c636daed8643477636976788dd786b5.html">API</a></li><li class="navelem"><a class="el" href="dir_d9371129cf467a7f638f33645fb2a8d3.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo API_sensor_fake.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="port_8h_source.html">port.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="API__delay_8h_source.html">API_delay.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="API__uart_8h_source.html">API_uart.h</a>&quot;</code><br />
+<code>#include &quot;stdbool.h&quot;</code><br />
+</div>
+<p><a href="API__sensor__fake_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a0715b0d1b3e07241a996e1aa448d5b45" id="r_a0715b0d1b3e07241a996e1aa448d5b45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="API__sensor__fake_8h.html#a0715b0d1b3e07241a996e1aa448d5b45">sensor_fake_iniciar</a> ()</td></tr>
+<tr class="memdesc:a0715b0d1b3e07241a996e1aa448d5b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia el sensor fake.  <br /></td></tr>
+<tr class="separator:a0715b0d1b3e07241a996e1aa448d5b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96e1038ef9e1a792bd46fd82cc530bda" id="r_a96e1038ef9e1a792bd46fd82cc530bda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="API__sensor__fake_8h.html#a96e1038ef9e1a792bd46fd82cc530bda">sensor_fake_actualizar</a> ()</td></tr>
+<tr class="memdesc:a96e1038ef9e1a792bd46fd82cc530bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene los datos del sensor fake y deja disponible los valores obtenidos.  <br /></td></tr>
+<tr class="separator:a96e1038ef9e1a792bd46fd82cc530bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaafa643b5ac459d720d1651e5edcb3cd" id="r_aaafa643b5ac459d720d1651e5edcb3cd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="API__sensor__fake_8h.html#aaafa643b5ac459d720d1651e5edcb3cd">sensor_fake_obtener_temperatura</a> ()</td></tr>
+<tr class="memdesc:aaafa643b5ac459d720d1651e5edcb3cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la temperatura actual desde el sensor fake.  <br /></td></tr>
+<tr class="separator:aaafa643b5ac459d720d1651e5edcb3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96242ddf182a04f3e95896b527635aa2" id="r_a96242ddf182a04f3e95896b527635aa2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="API__sensor__fake_8h.html#a96242ddf182a04f3e95896b527635aa2">sensor_fake_obtener_humedad</a> ()</td></tr>
+<tr class="memdesc:a96242ddf182a04f3e95896b527635aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la humedad actual desde el sensor fake.  <br /></td></tr>
+<tr class="separator:a96242ddf182a04f3e95896b527635aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f9621fe4e127d57787a20b173231b6" id="r_a66f9621fe4e127d57787a20b173231b6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="API__sensor__fake_8h.html#a66f9621fe4e127d57787a20b173231b6">sensor_fake_nueva_lectura</a> ()</td></tr>
+<tr class="memdesc:a66f9621fe4e127d57787a20b173231b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la secuencia de lectura del sensor fake.  <br /></td></tr>
+<tr class="separator:a66f9621fe4e127d57787a20b173231b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a96e1038ef9e1a792bd46fd82cc530bda" name="a96e1038ef9e1a792bd46fd82cc530bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e1038ef9e1a792bd46fd82cc530bda">&#9670;&#160;</a></span>sensor_fake_actualizar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sensor_fake_actualizar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene los datos del sensor fake y deja disponible los valores obtenidos. </p>
+<p>Realiza las operaciones necesarias para obtener los datos del sensor fake y actualiza las variables que contienen los datos de temperatura y humedad.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a0715b0d1b3e07241a996e1aa448d5b45" name="a0715b0d1b3e07241a996e1aa448d5b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0715b0d1b3e07241a996e1aa448d5b45">&#9670;&#160;</a></span>sensor_fake_iniciar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sensor_fake_iniciar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicia el sensor fake. </p>
+<p>Realiza las operaciones necesarias para iniciar el sensor fake.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a66f9621fe4e127d57787a20b173231b6" name="a66f9621fe4e127d57787a20b173231b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f9621fe4e127d57787a20b173231b6">&#9670;&#160;</a></span>sensor_fake_nueva_lectura()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t sensor_fake_nueva_lectura </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene la secuencia de lectura del sensor fake. </p>
+<p>Retorna la secuencia de lectura del sensor fake, se usa para controlar si hay una nueva lectura.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>Secuencia de lectura actual. </dd></dl>
+
+</div>
+</div>
+<a id="a96242ddf182a04f3e95896b527635aa2" name="a96242ddf182a04f3e95896b527635aa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96242ddf182a04f3e95896b527635aa2">&#9670;&#160;</a></span>sensor_fake_obtener_humedad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float sensor_fake_obtener_humedad </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene la humedad actual desde el sensor fake. </p>
+<p>Retorna la humedad actual medida por el sensor fake.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>Humedad actual en porcentaje (float). </dd></dl>
+
+</div>
+</div>
+<a id="aaafa643b5ac459d720d1651e5edcb3cd" name="aaafa643b5ac459d720d1651e5edcb3cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaafa643b5ac459d720d1651e5edcb3cd">&#9670;&#160;</a></span>sensor_fake_obtener_temperatura()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float sensor_fake_obtener_temperatura </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene la temperatura actual desde el sensor fake. </p>
+<p>Retorna la temperatura actual medida por el sensor fake.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>Temperatura actual en grados Celsius (float). </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

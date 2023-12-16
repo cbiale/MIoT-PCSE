@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Final: Archivo de código fuente Drivers/API/Inc/API_sensor_fake.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Proyecto Final<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">PMC - Práctica 3</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_9c636daed8643477636976788dd786b5.html">API</a></li><li class="navelem"><a class="el" href="dir_d9371129cf467a7f638f33645fb2a8d3.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">API_sensor_fake.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="API__sensor__fake_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * API_sensor_fake.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *  Created on: Dec 3, 2023</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *      Author: cbiale</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef API_INC_API_SENSOR_FAKE_H_</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define API_INC_API_SENSOR_FAKE_H_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="port_8h.html">port.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="API__delay_8h.html">API_delay.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="API__uart_8h.html">API_uart.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;stdbool.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="API__sensor__fake_8h.html#a0715b0d1b3e07241a996e1aa448d5b45">sensor_fake_iniciar</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> <a class="code hl_function" href="API__sensor__fake_8h.html#a96e1038ef9e1a792bd46fd82cc530bda">sensor_fake_actualizar</a> ();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">float</span> <a class="code hl_function" href="API__sensor__fake_8h.html#aaafa643b5ac459d720d1651e5edcb3cd">sensor_fake_obtener_temperatura</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">float</span> <a class="code hl_function" href="API__sensor__fake_8h.html#a96242ddf182a04f3e95896b527635aa2">sensor_fake_obtener_humedad</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>uint8_t <a class="code hl_function" href="API__sensor__fake_8h.html#a66f9621fe4e127d57787a20b173231b6">sensor_fake_nueva_lectura</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">/* API_INC_API_SENSOR_FAKE_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aAPI__delay_8h_html"><div class="ttname"><a href="API__delay_8h.html">API_delay.h</a></div></div>
+<div class="ttc" id="aAPI__sensor__fake_8h_html_a0715b0d1b3e07241a996e1aa448d5b45"><div class="ttname"><a href="API__sensor__fake_8h.html#a0715b0d1b3e07241a996e1aa448d5b45">sensor_fake_iniciar</a></div><div class="ttdeci">void sensor_fake_iniciar()</div><div class="ttdoc">Inicia el sensor fake.</div><div class="ttdef"><b>Definition</b> API_sensor_fake.c:78</div></div>
+<div class="ttc" id="aAPI__sensor__fake_8h_html_a66f9621fe4e127d57787a20b173231b6"><div class="ttname"><a href="API__sensor__fake_8h.html#a66f9621fe4e127d57787a20b173231b6">sensor_fake_nueva_lectura</a></div><div class="ttdeci">uint8_t sensor_fake_nueva_lectura()</div><div class="ttdoc">Obtiene la secuencia de lectura del sensor fake.</div><div class="ttdef"><b>Definition</b> API_sensor_fake.c:122</div></div>
+<div class="ttc" id="aAPI__sensor__fake_8h_html_a96242ddf182a04f3e95896b527635aa2"><div class="ttname"><a href="API__sensor__fake_8h.html#a96242ddf182a04f3e95896b527635aa2">sensor_fake_obtener_humedad</a></div><div class="ttdeci">float sensor_fake_obtener_humedad()</div><div class="ttdoc">Obtiene la humedad actual desde el sensor fake.</div><div class="ttdef"><b>Definition</b> API_sensor_fake.c:117</div></div>
+<div class="ttc" id="aAPI__sensor__fake_8h_html_a96e1038ef9e1a792bd46fd82cc530bda"><div class="ttname"><a href="API__sensor__fake_8h.html#a96e1038ef9e1a792bd46fd82cc530bda">sensor_fake_actualizar</a></div><div class="ttdeci">void sensor_fake_actualizar()</div><div class="ttdoc">Obtiene los datos del sensor fake y deja disponible los valores obtenidos.</div><div class="ttdef"><b>Definition</b> API_sensor_fake.c:87</div></div>
+<div class="ttc" id="aAPI__sensor__fake_8h_html_aaafa643b5ac459d720d1651e5edcb3cd"><div class="ttname"><a href="API__sensor__fake_8h.html#aaafa643b5ac459d720d1651e5edcb3cd">sensor_fake_obtener_temperatura</a></div><div class="ttdeci">float sensor_fake_obtener_temperatura()</div><div class="ttdoc">Obtiene la temperatura actual desde el sensor fake.</div><div class="ttdef"><b>Definition</b> API_sensor_fake.c:111</div></div>
+<div class="ttc" id="aAPI__uart_8h_html"><div class="ttname"><a href="API__uart_8h.html">API_uart.h</a></div></div>
+<div class="ttc" id="aport_8h_html"><div class="ttname"><a href="port_8h.html">port.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

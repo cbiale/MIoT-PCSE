@@ -1,0 +1,403 @@
+\doxysection{Referencia del archivo Drivers/\+API/\+Src/\+API\+\_\+lcd.c}
+\hypertarget{API__lcd_8c}{}\label{API__lcd_8c}\index{Drivers/API/Src/API\_lcd.c@{Drivers/API/Src/API\_lcd.c}}
+{\ttfamily \#include "{}API\+\_\+lcd.\+h"{}}\newline
+\doxysubsubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a307ffd11f853f262d10bb2989245ee44}{LCD\+\_\+\+DIRECCION}}~0x27
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a9ee221db30c3d57cbc3a946c35507b8f}{LCD\+\_\+\+FILAS}}~2
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a2b30f23734b969d70a1a592bf6b66aab}{LCD\+\_\+\+COLUMNAS}}~16
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a3ee95e3ef0c627f4e703afeb1dac335a}{LCD\+\_\+\+RS\+\_\+\+BIT}}~0
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_aac47ebff6e8337cf15585d35258bcac3}{LCD\+\_\+\+EN\+\_\+\+BIT}}~2
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a8bfe1dc0f6a1374ecb896981f0584835}{LCD\+\_\+\+BL\+\_\+\+BIT}}~3
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_ab949a7a09457c20d779c6f7dbf07f896}{LCD\+\_\+\+D4\+\_\+\+BIT}}~4
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_ae07c745ef3c2c2aacecd6dd41c8dc130}{LCD\+\_\+\+D5\+\_\+\+BIT}}~5
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_af49aeb2369934a855e740a5d57a9f006}{LCD\+\_\+\+D6\+\_\+\+BIT}}~6
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_ab767250c2cb4538dd3fd0c63b559e05f}{LCD\+\_\+\+D7\+\_\+\+BIT}}~7
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a348efe3a53e21062af077962b0110158}{LCD\+\_\+\+COMANDO}}~0
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a19e67bdf052066da8e5633aed2753f5f}{LCD\+\_\+\+DATOS}}~1
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a120ec3aba48411d8378fc1e525b878c7}{LCD\+\_\+\+CMD\+\_\+\+LIMPIAR}}~0b00000001
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_ac1d0902dcde792ab39d16564520daccc}{LCD\+\_\+\+CMD\+\_\+\+DDRAM\+\_\+\+DIRECCION}}~0b10000000
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a81052380ba1d48f943d7e06ddd32c832}{LCD\+\_\+\+CMD\+\_\+\+INICIO\+\_\+\+SET1}}~0x03
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a136b7271ff6537829d966c267f096659}{LCD\+\_\+\+CMD\+\_\+\+INICIO\+\_\+\+SET2}}~0x02
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a3c3444e4bff41724843f5874d60730ff}{LCD\+\_\+\+CMD\+\_\+\+INICIO28}}~0x28
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_afe4f1752a03d83170e81ea40a7468b40}{LCD\+\_\+\+CMD\+\_\+\+INICIO0C}}~0x0C
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a915778bf87ed166a11b205a7d468e1a9}{LCD\+\_\+\+CMD\+\_\+\+INICIO06}}~0x06
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a2636d26ed36c76b57caf33966dacaaae}{LCD\+\_\+\+CMD\+\_\+\+INICIO01}}~0x01
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_ac1a55a15c52e34da67886f7a03aa1048}{LCD\+\_\+\+LINEA\+\_\+1\+\_\+\+DIRECCION}}~0x00
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a58041d927098a1617d7643411d96e367}{LCD\+\_\+\+LINEA\+\_\+2\+\_\+\+DIRECCION}}~0x40
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a7c7c5b24b1d674d89405e5e24e550052}{LCD\+\_\+\+TIEMPO\+\_\+\+ESPERA}}~100
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a499445a56cb2dbf1bc4eed06f7c65ca5}{LCD\+\_\+\+LARGO\+\_\+\+VALORES}}~1
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a29971fd0ca3137217d36956b405e4053}{LCD\+\_\+\+LUZ\+\_\+\+FONDO\+\_\+\+ENCENDIDA}}~1
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a6e2b916a3b5098688bebc1c7493e2fb2}{LCD\+\_\+\+LUZ\+\_\+\+FONDO\+\_\+\+APAGADA}}~0
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a5b2a7e84e239eba20dbc72eafb8664aa}{LCD\+\_\+\+ESPERAR\+\_\+50}}~50
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a4360d9266b73c56846b822017a734908}{LCD\+\_\+\+ESPERAR\+\_\+1}}~1
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a196d098b155df6d58d6d89447e310d9d}{LCD\+\_\+\+ESPERAR\+\_\+5}}~5
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_afd9f8b7d4049d5156fce3aa6a6e2100f}{LCD\+\_\+\+DESPLAZAR\+\_\+1}}~1
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_a8cd4ec18744ff6f4f82d4718fb9dd0f4}{LCD\+\_\+\+DESPLAZAR\+\_\+4}}~4
+\item 
+\#define \mbox{\hyperlink{API__lcd_8c_afb7d440ff9a5c1d191d8e865369bb567}{LCD\+\_\+\+VALOR\+\_\+\+BINARIO\+\_\+1111}}~0x0F
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{API__lcd_8c_aad3981616664163865585f7ef552f5b1}{lcd\+\_\+escribir\+\_\+nibble}} (uint8\+\_\+t pin, uint8\+\_\+t valor)
+\item 
+static void \mbox{\hyperlink{API__lcd_8c_a6b721f94312ea8f762dd6816a81437f9}{lcd\+\_\+escribir\+\_\+codigo}} (uint8\+\_\+t comando, uint8\+\_\+t modo)
+\item 
+void \mbox{\hyperlink{API__lcd_8c_ab13b0ce7acc90c62cd400c3a3465cc60}{lcd\+\_\+iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa la pantalla del LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__lcd_8c_ad300f3e1cf5379308b58a0215c80e188}{lcd\+\_\+ubicar}} (uint8\+\_\+t fila, uint8\+\_\+t columna)
+\begin{DoxyCompactList}\small\item\em Ubica el cursor en una posición específica del LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__lcd_8c_a552f29803075cd1281b77739e76bb94b}{lcd\+\_\+limpiar}} ()
+\begin{DoxyCompactList}\small\item\em Limpia la pantalla del LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__lcd_8c_a13d79f90715afff1ef4d5d6c28ca71a1}{lcd\+\_\+escribir\+\_\+string}} (const char \texorpdfstring{$\ast$}{*}cadena)
+\begin{DoxyCompactList}\small\item\em Escribe una cadena de texto en el LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__lcd_8c_aa33113f1b13552bd72cd5e4487b954c9}{lcd\+\_\+luz\+\_\+fondo}} (bool \mbox{\hyperlink{API__debounce_8c_ab3b801ff5a30ac7b78184a2307486771}{estado}})
+\begin{DoxyCompactList}\small\item\em Controla el estado de la luz de fondo del LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static uint8\+\_\+t \mbox{\hyperlink{API__lcd_8c_a3f3b91ce0afcc9505bdce008f013f949}{estado\+\_\+luz\+\_\+fondo}} = \mbox{\hyperlink{API__lcd_8c_a6e2b916a3b5098688bebc1c7493e2fb2}{LCD\+\_\+\+LUZ\+\_\+\+FONDO\+\_\+\+APAGADA}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de «define»}
+\Hypertarget{API__lcd_8c_a8bfe1dc0f6a1374ecb896981f0584835}\label{API__lcd_8c_a8bfe1dc0f6a1374ecb896981f0584835} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_BL\_BIT@{LCD\_BL\_BIT}}
+\index{LCD\_BL\_BIT@{LCD\_BL\_BIT}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_BL\_BIT}{LCD\_BL\_BIT}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+BL\+\_\+\+BIT~3}
+
+\Hypertarget{API__lcd_8c_ac1d0902dcde792ab39d16564520daccc}\label{API__lcd_8c_ac1d0902dcde792ab39d16564520daccc} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_CMD\_DDRAM\_DIRECCION@{LCD\_CMD\_DDRAM\_DIRECCION}}
+\index{LCD\_CMD\_DDRAM\_DIRECCION@{LCD\_CMD\_DDRAM\_DIRECCION}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_CMD\_DDRAM\_DIRECCION}{LCD\_CMD\_DDRAM\_DIRECCION}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+CMD\+\_\+\+DDRAM\+\_\+\+DIRECCION~0b10000000}
+
+\Hypertarget{API__lcd_8c_a2636d26ed36c76b57caf33966dacaaae}\label{API__lcd_8c_a2636d26ed36c76b57caf33966dacaaae} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_CMD\_INICIO01@{LCD\_CMD\_INICIO01}}
+\index{LCD\_CMD\_INICIO01@{LCD\_CMD\_INICIO01}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_CMD\_INICIO01}{LCD\_CMD\_INICIO01}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+CMD\+\_\+\+INICIO01~0x01}
+
+\Hypertarget{API__lcd_8c_a915778bf87ed166a11b205a7d468e1a9}\label{API__lcd_8c_a915778bf87ed166a11b205a7d468e1a9} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_CMD\_INICIO06@{LCD\_CMD\_INICIO06}}
+\index{LCD\_CMD\_INICIO06@{LCD\_CMD\_INICIO06}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_CMD\_INICIO06}{LCD\_CMD\_INICIO06}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+CMD\+\_\+\+INICIO06~0x06}
+
+\Hypertarget{API__lcd_8c_afe4f1752a03d83170e81ea40a7468b40}\label{API__lcd_8c_afe4f1752a03d83170e81ea40a7468b40} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_CMD\_INICIO0C@{LCD\_CMD\_INICIO0C}}
+\index{LCD\_CMD\_INICIO0C@{LCD\_CMD\_INICIO0C}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_CMD\_INICIO0C}{LCD\_CMD\_INICIO0C}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+CMD\+\_\+\+INICIO0C~0x0C}
+
+\Hypertarget{API__lcd_8c_a3c3444e4bff41724843f5874d60730ff}\label{API__lcd_8c_a3c3444e4bff41724843f5874d60730ff} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_CMD\_INICIO28@{LCD\_CMD\_INICIO28}}
+\index{LCD\_CMD\_INICIO28@{LCD\_CMD\_INICIO28}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_CMD\_INICIO28}{LCD\_CMD\_INICIO28}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+CMD\+\_\+\+INICIO28~0x28}
+
+\Hypertarget{API__lcd_8c_a81052380ba1d48f943d7e06ddd32c832}\label{API__lcd_8c_a81052380ba1d48f943d7e06ddd32c832} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_CMD\_INICIO\_SET1@{LCD\_CMD\_INICIO\_SET1}}
+\index{LCD\_CMD\_INICIO\_SET1@{LCD\_CMD\_INICIO\_SET1}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_CMD\_INICIO\_SET1}{LCD\_CMD\_INICIO\_SET1}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+CMD\+\_\+\+INICIO\+\_\+\+SET1~0x03}
+
+\Hypertarget{API__lcd_8c_a136b7271ff6537829d966c267f096659}\label{API__lcd_8c_a136b7271ff6537829d966c267f096659} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_CMD\_INICIO\_SET2@{LCD\_CMD\_INICIO\_SET2}}
+\index{LCD\_CMD\_INICIO\_SET2@{LCD\_CMD\_INICIO\_SET2}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_CMD\_INICIO\_SET2}{LCD\_CMD\_INICIO\_SET2}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+CMD\+\_\+\+INICIO\+\_\+\+SET2~0x02}
+
+\Hypertarget{API__lcd_8c_a120ec3aba48411d8378fc1e525b878c7}\label{API__lcd_8c_a120ec3aba48411d8378fc1e525b878c7} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_CMD\_LIMPIAR@{LCD\_CMD\_LIMPIAR}}
+\index{LCD\_CMD\_LIMPIAR@{LCD\_CMD\_LIMPIAR}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_CMD\_LIMPIAR}{LCD\_CMD\_LIMPIAR}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+CMD\+\_\+\+LIMPIAR~0b00000001}
+
+\Hypertarget{API__lcd_8c_a2b30f23734b969d70a1a592bf6b66aab}\label{API__lcd_8c_a2b30f23734b969d70a1a592bf6b66aab} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_COLUMNAS@{LCD\_COLUMNAS}}
+\index{LCD\_COLUMNAS@{LCD\_COLUMNAS}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_COLUMNAS}{LCD\_COLUMNAS}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COLUMNAS~16}
+
+\Hypertarget{API__lcd_8c_a348efe3a53e21062af077962b0110158}\label{API__lcd_8c_a348efe3a53e21062af077962b0110158} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_COMANDO@{LCD\_COMANDO}}
+\index{LCD\_COMANDO@{LCD\_COMANDO}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_COMANDO}{LCD\_COMANDO}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+COMANDO~0}
+
+\Hypertarget{API__lcd_8c_ab949a7a09457c20d779c6f7dbf07f896}\label{API__lcd_8c_ab949a7a09457c20d779c6f7dbf07f896} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_D4\_BIT@{LCD\_D4\_BIT}}
+\index{LCD\_D4\_BIT@{LCD\_D4\_BIT}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_D4\_BIT}{LCD\_D4\_BIT}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+D4\+\_\+\+BIT~4}
+
+\Hypertarget{API__lcd_8c_ae07c745ef3c2c2aacecd6dd41c8dc130}\label{API__lcd_8c_ae07c745ef3c2c2aacecd6dd41c8dc130} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_D5\_BIT@{LCD\_D5\_BIT}}
+\index{LCD\_D5\_BIT@{LCD\_D5\_BIT}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_D5\_BIT}{LCD\_D5\_BIT}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+D5\+\_\+\+BIT~5}
+
+\Hypertarget{API__lcd_8c_af49aeb2369934a855e740a5d57a9f006}\label{API__lcd_8c_af49aeb2369934a855e740a5d57a9f006} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_D6\_BIT@{LCD\_D6\_BIT}}
+\index{LCD\_D6\_BIT@{LCD\_D6\_BIT}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_D6\_BIT}{LCD\_D6\_BIT}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+D6\+\_\+\+BIT~6}
+
+\Hypertarget{API__lcd_8c_ab767250c2cb4538dd3fd0c63b559e05f}\label{API__lcd_8c_ab767250c2cb4538dd3fd0c63b559e05f} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_D7\_BIT@{LCD\_D7\_BIT}}
+\index{LCD\_D7\_BIT@{LCD\_D7\_BIT}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_D7\_BIT}{LCD\_D7\_BIT}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+D7\+\_\+\+BIT~7}
+
+\Hypertarget{API__lcd_8c_a19e67bdf052066da8e5633aed2753f5f}\label{API__lcd_8c_a19e67bdf052066da8e5633aed2753f5f} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_DATOS@{LCD\_DATOS}}
+\index{LCD\_DATOS@{LCD\_DATOS}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_DATOS}{LCD\_DATOS}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+DATOS~1}
+
+\Hypertarget{API__lcd_8c_afd9f8b7d4049d5156fce3aa6a6e2100f}\label{API__lcd_8c_afd9f8b7d4049d5156fce3aa6a6e2100f} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_DESPLAZAR\_1@{LCD\_DESPLAZAR\_1}}
+\index{LCD\_DESPLAZAR\_1@{LCD\_DESPLAZAR\_1}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_DESPLAZAR\_1}{LCD\_DESPLAZAR\_1}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+DESPLAZAR\+\_\+1~1}
+
+\Hypertarget{API__lcd_8c_a8cd4ec18744ff6f4f82d4718fb9dd0f4}\label{API__lcd_8c_a8cd4ec18744ff6f4f82d4718fb9dd0f4} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_DESPLAZAR\_4@{LCD\_DESPLAZAR\_4}}
+\index{LCD\_DESPLAZAR\_4@{LCD\_DESPLAZAR\_4}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_DESPLAZAR\_4}{LCD\_DESPLAZAR\_4}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+DESPLAZAR\+\_\+4~4}
+
+\Hypertarget{API__lcd_8c_a307ffd11f853f262d10bb2989245ee44}\label{API__lcd_8c_a307ffd11f853f262d10bb2989245ee44} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_DIRECCION@{LCD\_DIRECCION}}
+\index{LCD\_DIRECCION@{LCD\_DIRECCION}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_DIRECCION}{LCD\_DIRECCION}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+DIRECCION~0x27}
+
+\Hypertarget{API__lcd_8c_aac47ebff6e8337cf15585d35258bcac3}\label{API__lcd_8c_aac47ebff6e8337cf15585d35258bcac3} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_EN\_BIT@{LCD\_EN\_BIT}}
+\index{LCD\_EN\_BIT@{LCD\_EN\_BIT}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_EN\_BIT}{LCD\_EN\_BIT}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+EN\+\_\+\+BIT~2}
+
+\Hypertarget{API__lcd_8c_a4360d9266b73c56846b822017a734908}\label{API__lcd_8c_a4360d9266b73c56846b822017a734908} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_ESPERAR\_1@{LCD\_ESPERAR\_1}}
+\index{LCD\_ESPERAR\_1@{LCD\_ESPERAR\_1}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_ESPERAR\_1}{LCD\_ESPERAR\_1}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+ESPERAR\+\_\+1~1}
+
+\Hypertarget{API__lcd_8c_a196d098b155df6d58d6d89447e310d9d}\label{API__lcd_8c_a196d098b155df6d58d6d89447e310d9d} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_ESPERAR\_5@{LCD\_ESPERAR\_5}}
+\index{LCD\_ESPERAR\_5@{LCD\_ESPERAR\_5}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_ESPERAR\_5}{LCD\_ESPERAR\_5}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+ESPERAR\+\_\+5~5}
+
+\Hypertarget{API__lcd_8c_a5b2a7e84e239eba20dbc72eafb8664aa}\label{API__lcd_8c_a5b2a7e84e239eba20dbc72eafb8664aa} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_ESPERAR\_50@{LCD\_ESPERAR\_50}}
+\index{LCD\_ESPERAR\_50@{LCD\_ESPERAR\_50}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_ESPERAR\_50}{LCD\_ESPERAR\_50}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+ESPERAR\+\_\+50~50}
+
+\Hypertarget{API__lcd_8c_a9ee221db30c3d57cbc3a946c35507b8f}\label{API__lcd_8c_a9ee221db30c3d57cbc3a946c35507b8f} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_FILAS@{LCD\_FILAS}}
+\index{LCD\_FILAS@{LCD\_FILAS}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_FILAS}{LCD\_FILAS}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+FILAS~2}
+
+\Hypertarget{API__lcd_8c_a499445a56cb2dbf1bc4eed06f7c65ca5}\label{API__lcd_8c_a499445a56cb2dbf1bc4eed06f7c65ca5} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_LARGO\_VALORES@{LCD\_LARGO\_VALORES}}
+\index{LCD\_LARGO\_VALORES@{LCD\_LARGO\_VALORES}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_LARGO\_VALORES}{LCD\_LARGO\_VALORES}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+LARGO\+\_\+\+VALORES~1}
+
+\Hypertarget{API__lcd_8c_ac1a55a15c52e34da67886f7a03aa1048}\label{API__lcd_8c_ac1a55a15c52e34da67886f7a03aa1048} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_LINEA\_1\_DIRECCION@{LCD\_LINEA\_1\_DIRECCION}}
+\index{LCD\_LINEA\_1\_DIRECCION@{LCD\_LINEA\_1\_DIRECCION}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_LINEA\_1\_DIRECCION}{LCD\_LINEA\_1\_DIRECCION}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+LINEA\+\_\+1\+\_\+\+DIRECCION~0x00}
+
+\Hypertarget{API__lcd_8c_a58041d927098a1617d7643411d96e367}\label{API__lcd_8c_a58041d927098a1617d7643411d96e367} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_LINEA\_2\_DIRECCION@{LCD\_LINEA\_2\_DIRECCION}}
+\index{LCD\_LINEA\_2\_DIRECCION@{LCD\_LINEA\_2\_DIRECCION}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_LINEA\_2\_DIRECCION}{LCD\_LINEA\_2\_DIRECCION}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+LINEA\+\_\+2\+\_\+\+DIRECCION~0x40}
+
+\Hypertarget{API__lcd_8c_a6e2b916a3b5098688bebc1c7493e2fb2}\label{API__lcd_8c_a6e2b916a3b5098688bebc1c7493e2fb2} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_LUZ\_FONDO\_APAGADA@{LCD\_LUZ\_FONDO\_APAGADA}}
+\index{LCD\_LUZ\_FONDO\_APAGADA@{LCD\_LUZ\_FONDO\_APAGADA}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_LUZ\_FONDO\_APAGADA}{LCD\_LUZ\_FONDO\_APAGADA}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+LUZ\+\_\+\+FONDO\+\_\+\+APAGADA~0}
+
+\Hypertarget{API__lcd_8c_a29971fd0ca3137217d36956b405e4053}\label{API__lcd_8c_a29971fd0ca3137217d36956b405e4053} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_LUZ\_FONDO\_ENCENDIDA@{LCD\_LUZ\_FONDO\_ENCENDIDA}}
+\index{LCD\_LUZ\_FONDO\_ENCENDIDA@{LCD\_LUZ\_FONDO\_ENCENDIDA}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_LUZ\_FONDO\_ENCENDIDA}{LCD\_LUZ\_FONDO\_ENCENDIDA}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+LUZ\+\_\+\+FONDO\+\_\+\+ENCENDIDA~1}
+
+\Hypertarget{API__lcd_8c_a3ee95e3ef0c627f4e703afeb1dac335a}\label{API__lcd_8c_a3ee95e3ef0c627f4e703afeb1dac335a} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_RS\_BIT@{LCD\_RS\_BIT}}
+\index{LCD\_RS\_BIT@{LCD\_RS\_BIT}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_RS\_BIT}{LCD\_RS\_BIT}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+RS\+\_\+\+BIT~0}
+
+\Hypertarget{API__lcd_8c_a7c7c5b24b1d674d89405e5e24e550052}\label{API__lcd_8c_a7c7c5b24b1d674d89405e5e24e550052} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_TIEMPO\_ESPERA@{LCD\_TIEMPO\_ESPERA}}
+\index{LCD\_TIEMPO\_ESPERA@{LCD\_TIEMPO\_ESPERA}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_TIEMPO\_ESPERA}{LCD\_TIEMPO\_ESPERA}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+TIEMPO\+\_\+\+ESPERA~100}
+
+\Hypertarget{API__lcd_8c_afb7d440ff9a5c1d191d8e865369bb567}\label{API__lcd_8c_afb7d440ff9a5c1d191d8e865369bb567} 
+\index{API\_lcd.c@{API\_lcd.c}!LCD\_VALOR\_BINARIO\_1111@{LCD\_VALOR\_BINARIO\_1111}}
+\index{LCD\_VALOR\_BINARIO\_1111@{LCD\_VALOR\_BINARIO\_1111}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_VALOR\_BINARIO\_1111}{LCD\_VALOR\_BINARIO\_1111}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+VALOR\+\_\+\+BINARIO\+\_\+1111~0x0F}
+
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{API__lcd_8c_a6b721f94312ea8f762dd6816a81437f9}\label{API__lcd_8c_a6b721f94312ea8f762dd6816a81437f9} 
+\index{API\_lcd.c@{API\_lcd.c}!lcd\_escribir\_codigo@{lcd\_escribir\_codigo}}
+\index{lcd\_escribir\_codigo@{lcd\_escribir\_codigo}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{lcd\_escribir\_codigo()}{lcd\_escribir\_codigo()}}
+{\footnotesize\ttfamily static void lcd\+\_\+escribir\+\_\+codigo (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{comando,  }\item[{uint8\+\_\+t}]{modo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{API__lcd_8c_aad3981616664163865585f7ef552f5b1}\label{API__lcd_8c_aad3981616664163865585f7ef552f5b1} 
+\index{API\_lcd.c@{API\_lcd.c}!lcd\_escribir\_nibble@{lcd\_escribir\_nibble}}
+\index{lcd\_escribir\_nibble@{lcd\_escribir\_nibble}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{lcd\_escribir\_nibble()}{lcd\_escribir\_nibble()}}
+{\footnotesize\ttfamily static void lcd\+\_\+escribir\+\_\+nibble (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{API__lcd_8c_a13d79f90715afff1ef4d5d6c28ca71a1}\label{API__lcd_8c_a13d79f90715afff1ef4d5d6c28ca71a1} 
+\index{API\_lcd.c@{API\_lcd.c}!lcd\_escribir\_string@{lcd\_escribir\_string}}
+\index{lcd\_escribir\_string@{lcd\_escribir\_string}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{lcd\_escribir\_string()}{lcd\_escribir\_string()}}
+{\footnotesize\ttfamily void lcd\+\_\+escribir\+\_\+string (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{cadena }\end{DoxyParamCaption})}
+
+
+
+Escribe una cadena de texto en el LCD. 
+
+Esta función recorre cada caracter de la cadena y envía cada caracter como dato al LCD.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cadena} & Cadena de caracteres a escribir en el LCD.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__lcd_8c_ab13b0ce7acc90c62cd400c3a3465cc60}\label{API__lcd_8c_ab13b0ce7acc90c62cd400c3a3465cc60} 
+\index{API\_lcd.c@{API\_lcd.c}!lcd\_iniciar@{lcd\_iniciar}}
+\index{lcd\_iniciar@{lcd\_iniciar}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{lcd\_iniciar()}{lcd\_iniciar()}}
+{\footnotesize\ttfamily void lcd\+\_\+iniciar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa la pantalla del LCD. 
+
+Esta función envía los comandos necesarios al LCD para poder inicializarlo.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__lcd_8c_a552f29803075cd1281b77739e76bb94b}\label{API__lcd_8c_a552f29803075cd1281b77739e76bb94b} 
+\index{API\_lcd.c@{API\_lcd.c}!lcd\_limpiar@{lcd\_limpiar}}
+\index{lcd\_limpiar@{lcd\_limpiar}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{lcd\_limpiar()}{lcd\_limpiar()}}
+{\footnotesize\ttfamily void lcd\+\_\+limpiar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Limpia la pantalla del LCD. 
+
+Esta función envía un comando al LCD para limpiar la pantalla y espera un tiempo para asegurarse de que la operación se complete.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__lcd_8c_aa33113f1b13552bd72cd5e4487b954c9}\label{API__lcd_8c_aa33113f1b13552bd72cd5e4487b954c9} 
+\index{API\_lcd.c@{API\_lcd.c}!lcd\_luz\_fondo@{lcd\_luz\_fondo}}
+\index{lcd\_luz\_fondo@{lcd\_luz\_fondo}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{lcd\_luz\_fondo()}{lcd\_luz\_fondo()}}
+{\footnotesize\ttfamily void lcd\+\_\+luz\+\_\+fondo (\begin{DoxyParamCaption}\item[{bool}]{estado }\end{DoxyParamCaption})}
+
+
+
+Controla el estado de la luz de fondo del LCD. 
+
+Esta función permite encender o apagar la luz de fondo del LCD según el valor del parámetro \textquotesingle{}estado\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em estado} & Indica si se debe encender (true) o apagar (false) la luz de fondo.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__lcd_8c_ad300f3e1cf5379308b58a0215c80e188}\label{API__lcd_8c_ad300f3e1cf5379308b58a0215c80e188} 
+\index{API\_lcd.c@{API\_lcd.c}!lcd\_ubicar@{lcd\_ubicar}}
+\index{lcd\_ubicar@{lcd\_ubicar}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{lcd\_ubicar()}{lcd\_ubicar()}}
+{\footnotesize\ttfamily void lcd\+\_\+ubicar (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{fila,  }\item[{uint8\+\_\+t}]{columna }\end{DoxyParamCaption})}
+
+
+
+Ubica el cursor en una posición específica del LCD. 
+
+Esta función ubica el cursor en la posición indicada por los parámetros \textquotesingle{}fila\textquotesingle{} y \textquotesingle{}columna\textquotesingle{} del LCD.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fila} & Número de fila donde se desea ubicar el cursor. \\
+\hline
+{\em columna} & Número de columna donde se desea ubicar el cursor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{API__lcd_8c_a3f3b91ce0afcc9505bdce008f013f949}\label{API__lcd_8c_a3f3b91ce0afcc9505bdce008f013f949} 
+\index{API\_lcd.c@{API\_lcd.c}!estado\_luz\_fondo@{estado\_luz\_fondo}}
+\index{estado\_luz\_fondo@{estado\_luz\_fondo}!API\_lcd.c@{API\_lcd.c}}
+\doxysubsubsection{\texorpdfstring{estado\_luz\_fondo}{estado\_luz\_fondo}}
+{\footnotesize\ttfamily uint8\+\_\+t estado\+\_\+luz\+\_\+fondo = \mbox{\hyperlink{API__lcd_8c_a6e2b916a3b5098688bebc1c7493e2fb2}{LCD\+\_\+\+LUZ\+\_\+\+FONDO\+\_\+\+APAGADA}}\hspace{0.3cm}{\ttfamily [static]}}
+

@@ -1,0 +1,123 @@
+\doxysection{Referencia del archivo Drivers/\+API/\+Src/\+API\+\_\+uart.c}
+\hypertarget{API__uart_8c}{}\label{API__uart_8c}\index{Drivers/API/Src/API\_uart.c@{Drivers/API/Src/API\_uart.c}}
+{\ttfamily \#include "{}API\+\_\+uart.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{API__delay_8h_a2b21255bd7f7192db778983b15089208}{bool\+\_\+t}} \mbox{\hyperlink{API__uart_8c_a0d0d1729b247ca7932b836a48e45b6b6}{uart\+\_\+iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Inicia la UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__uart_8c_aec0f5bb7e6bdf17e7edef5ee20c0acea}{uart\+\_\+enviar\+\_\+string}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}pstring)
+\begin{DoxyCompactList}\small\item\em Transfiere una cadena de texto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__uart_8c_afa4dc471f073e01bf91b980cedad0427}{uart\+\_\+enviar\+\_\+string\+\_\+tamano}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}pstring, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Transfiere una cadena de texto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__uart_8c_a800b571054b16acaaead12913d453ca6}{uart\+\_\+recibir\+\_\+string\+\_\+tamano}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}pstring, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Recepciona datos y los almacena en una cadena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__uart_8c_a1d6cb116064395f1ba53ca9115099da8}{uart\+\_\+actualizar}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{group__UART__Exported__Types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{API__uart_8c_a2d3238638f25fd8e78b21dc8e5efd348}{Uart\+Handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{API__uart_8c_a1d6cb116064395f1ba53ca9115099da8}\label{API__uart_8c_a1d6cb116064395f1ba53ca9115099da8} 
+\index{API\_uart.c@{API\_uart.c}!uart\_actualizar@{uart\_actualizar}}
+\index{uart\_actualizar@{uart\_actualizar}!API\_uart.c@{API\_uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_actualizar()}{uart\_actualizar()}}
+{\footnotesize\ttfamily void uart\+\_\+actualizar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{API__uart_8c_aec0f5bb7e6bdf17e7edef5ee20c0acea}\label{API__uart_8c_aec0f5bb7e6bdf17e7edef5ee20c0acea} 
+\index{API\_uart.c@{API\_uart.c}!uart\_enviar\_string@{uart\_enviar\_string}}
+\index{uart\_enviar\_string@{uart\_enviar\_string}!API\_uart.c@{API\_uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_enviar\_string()}{uart\_enviar\_string()}}
+{\footnotesize\ttfamily void uart\+\_\+enviar\+\_\+string (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{pstring }\end{DoxyParamCaption})}
+
+
+
+Transfiere una cadena de texto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Puntero} & a la cadena de texto a transferir\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{API__uart_8c_afa4dc471f073e01bf91b980cedad0427}\label{API__uart_8c_afa4dc471f073e01bf91b980cedad0427} 
+\index{API\_uart.c@{API\_uart.c}!uart\_enviar\_string\_tamano@{uart\_enviar\_string\_tamano}}
+\index{uart\_enviar\_string\_tamano@{uart\_enviar\_string\_tamano}!API\_uart.c@{API\_uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_enviar\_string\_tamano()}{uart\_enviar\_string\_tamano()}}
+{\footnotesize\ttfamily void uart\+\_\+enviar\+\_\+string\+\_\+tamano (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{pstring,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Transfiere una cadena de texto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Puntero} & a la cadena de texto a transferir \\
+\hline
+{\em Largo} & máximo que puede tener la cadena de texto a transferir\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{API__uart_8c_a0d0d1729b247ca7932b836a48e45b6b6}\label{API__uart_8c_a0d0d1729b247ca7932b836a48e45b6b6} 
+\index{API\_uart.c@{API\_uart.c}!uart\_iniciar@{uart\_iniciar}}
+\index{uart\_iniciar@{uart\_iniciar}!API\_uart.c@{API\_uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_iniciar()}{uart\_iniciar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{API__delay_8h_a2b21255bd7f7192db778983b15089208}{bool\+\_\+t}} uart\+\_\+iniciar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia la UART. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Ninguno} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em Ninguno} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{API__uart_8c_a800b571054b16acaaead12913d453ca6}\label{API__uart_8c_a800b571054b16acaaead12913d453ca6} 
+\index{API\_uart.c@{API\_uart.c}!uart\_recibir\_string\_tamano@{uart\_recibir\_string\_tamano}}
+\index{uart\_recibir\_string\_tamano@{uart\_recibir\_string\_tamano}!API\_uart.c@{API\_uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_recibir\_string\_tamano()}{uart\_recibir\_string\_tamano()}}
+{\footnotesize\ttfamily void uart\+\_\+recibir\+\_\+string\+\_\+tamano (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{pstring,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Recepciona datos y los almacena en una cadena. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Puntero} & donde se almacenan los datos recepcionados \\
+\hline
+{\em Largo} & máximo de datos a recepcionar\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{API__uart_8c_a2d3238638f25fd8e78b21dc8e5efd348}\label{API__uart_8c_a2d3238638f25fd8e78b21dc8e5efd348} 
+\index{API\_uart.c@{API\_uart.c}!UartHandle@{UartHandle}}
+\index{UartHandle@{UartHandle}!API\_uart.c@{API\_uart.c}}
+\doxysubsubsection{\texorpdfstring{UartHandle}{UartHandle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__UART__Exported__Types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} Uart\+Handle\hspace{0.3cm}{\ttfamily [static]}}
+

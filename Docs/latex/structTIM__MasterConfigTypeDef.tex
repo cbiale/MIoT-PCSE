@@ -1,0 +1,44 @@
+\doxysection{Referencia de la estructura TIM\+\_\+\+Master\+Config\+Type\+Def}
+\hypertarget{structTIM__MasterConfigTypeDef}{}\label{structTIM__MasterConfigTypeDef}\index{TIM\_MasterConfigTypeDef@{TIM\_MasterConfigTypeDef}}
+
+
+TIM Master configuration Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+tim.\+h$>$}
+
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structTIM__MasterConfigTypeDef_aafb70c2c7a9a93a3dad59a350df2b00f}{Master\+Output\+Trigger}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structTIM__MasterConfigTypeDef_aa17903ecbee15ce7a6d51de5e9602d3f}{Master\+Slave\+Mode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+TIM Master configuration Structure definition. 
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{structTIM__MasterConfigTypeDef_aafb70c2c7a9a93a3dad59a350df2b00f}\label{structTIM__MasterConfigTypeDef_aafb70c2c7a9a93a3dad59a350df2b00f} 
+\index{TIM\_MasterConfigTypeDef@{TIM\_MasterConfigTypeDef}!MasterOutputTrigger@{MasterOutputTrigger}}
+\index{MasterOutputTrigger@{MasterOutputTrigger}!TIM\_MasterConfigTypeDef@{TIM\_MasterConfigTypeDef}}
+\doxysubsubsection{\texorpdfstring{MasterOutputTrigger}{MasterOutputTrigger}}
+{\footnotesize\ttfamily uint32\+\_\+t Master\+Output\+Trigger}
+
+Trigger output (TRGO) selection This parameter can be a value of \doxylink{group__TIM__Master__Mode__Selection}{TIM Master Mode Selection} \Hypertarget{structTIM__MasterConfigTypeDef_aa17903ecbee15ce7a6d51de5e9602d3f}\label{structTIM__MasterConfigTypeDef_aa17903ecbee15ce7a6d51de5e9602d3f} 
+\index{TIM\_MasterConfigTypeDef@{TIM\_MasterConfigTypeDef}!MasterSlaveMode@{MasterSlaveMode}}
+\index{MasterSlaveMode@{MasterSlaveMode}!TIM\_MasterConfigTypeDef@{TIM\_MasterConfigTypeDef}}
+\doxysubsubsection{\texorpdfstring{MasterSlaveMode}{MasterSlaveMode}}
+{\footnotesize\ttfamily uint32\+\_\+t Master\+Slave\+Mode}
+
+Master/slave mode selection This parameter can be a value of \doxylink{group__TIM__Master__Slave__Mode}{TIM Master/\+Slave Mode} \begin{DoxyNote}{Nota}
+When the Master/slave mode is enabled, the effect of an event on the trigger input (TRGI) is delayed to allow a perfect synchronization between the current timer and its slaves (through TRGO). It is not mandatory in case of timer synchronization mode. 
+\end{DoxyNote}
+
+
+La documentación de esta estructura está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+STM32\+F4xx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32f4xx__hal__tim_8h}{stm32f4xx\+\_\+hal\+\_\+tim.\+h}}\end{DoxyCompactItemize}

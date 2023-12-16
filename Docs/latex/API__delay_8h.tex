@@ -1,0 +1,116 @@
+\doxysection{Referencia del archivo Drivers/\+API/\+Inc/\+API\+\_\+delay.h}
+\hypertarget{API__delay_8h}{}\label{API__delay_8h}\index{Drivers/API/Inc/API\_delay.h@{Drivers/API/Inc/API\_delay.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include "{}port.\+h"{}}\newline
+\doxysubsubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdelay__t}{delay\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Estructura que mantiene información de un retardo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{API__delay_8h_a451a7d205dfb766727eba25c6e61c687}{tick\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Tipo de datos que define el tiempo de un retardo. \end{DoxyCompactList}\item 
+typedef bool \mbox{\hyperlink{API__delay_8h_a2b21255bd7f7192db778983b15089208}{bool\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Tipo de datos que define un valor lógico. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{API__delay_8h_a6613427678149cadd03bac79e79475f3}{delay\+Init}} (\mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} \texorpdfstring{$\ast$}{*}delay, \mbox{\hyperlink{API__delay_8h_a451a7d205dfb766727eba25c6e61c687}{tick\+\_\+t}} duration)
+\begin{DoxyCompactList}\small\item\em Inicializa la estructura que almacena información del retardo Nota\+: se debe llamar antes que cualquier otra función maneja retardos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{API__delay_8h_a2b21255bd7f7192db778983b15089208}{bool\+\_\+t}} \mbox{\hyperlink{API__delay_8h_afecaa44225b94ebfb354e4b6b7e6e9ce}{delay\+Read}} (\mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} \texorpdfstring{$\ast$}{*}delay)
+\begin{DoxyCompactList}\small\item\em Verifica si se completa el retardo configurado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__delay_8h_a2af041ac01bb3db8ecf87ce371fac67d}{delay\+Write}} (\mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} \texorpdfstring{$\ast$}{*}delay, \mbox{\hyperlink{API__delay_8h_a451a7d205dfb766727eba25c6e61c687}{tick\+\_\+t}} duration)
+\begin{DoxyCompactList}\small\item\em Cambia la duración de un retardo existente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de «typedef»}
+\Hypertarget{API__delay_8h_a2b21255bd7f7192db778983b15089208}\label{API__delay_8h_a2b21255bd7f7192db778983b15089208} 
+\index{API\_delay.h@{API\_delay.h}!bool\_t@{bool\_t}}
+\index{bool\_t@{bool\_t}!API\_delay.h@{API\_delay.h}}
+\doxysubsubsection{\texorpdfstring{bool\_t}{bool\_t}}
+{\footnotesize\ttfamily typedef bool \mbox{\hyperlink{API__delay_8h_a2b21255bd7f7192db778983b15089208}{bool\+\_\+t}}}
+
+
+
+Tipo de datos que define un valor lógico. 
+
+\Hypertarget{API__delay_8h_a451a7d205dfb766727eba25c6e61c687}\label{API__delay_8h_a451a7d205dfb766727eba25c6e61c687} 
+\index{API\_delay.h@{API\_delay.h}!tick\_t@{tick\_t}}
+\index{tick\_t@{tick\_t}!API\_delay.h@{API\_delay.h}}
+\doxysubsubsection{\texorpdfstring{tick\_t}{tick\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{API__delay_8h_a451a7d205dfb766727eba25c6e61c687}{tick\+\_\+t}}}
+
+
+
+Tipo de datos que define el tiempo de un retardo. 
+
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{API__delay_8h_a6613427678149cadd03bac79e79475f3}\label{API__delay_8h_a6613427678149cadd03bac79e79475f3} 
+\index{API\_delay.h@{API\_delay.h}!delayInit@{delayInit}}
+\index{delayInit@{delayInit}!API\_delay.h@{API\_delay.h}}
+\doxysubsubsection{\texorpdfstring{delayInit()}{delayInit()}}
+{\footnotesize\ttfamily void delay\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{delay,  }\item[{\mbox{\hyperlink{API__delay_8h_a451a7d205dfb766727eba25c6e61c687}{tick\+\_\+t}}}]{duration }\end{DoxyParamCaption})}
+
+
+
+Inicializa la estructura que almacena información del retardo Nota\+: se debe llamar antes que cualquier otra función maneja retardos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Puntero} & a la estructura \doxylink{structdelay__t}{delay\+\_\+t} donde se almacena información del retardo \\
+\hline
+{\em Duración} & del retardo (expresado en ms) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em Ninguno} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{API__delay_8h_afecaa44225b94ebfb354e4b6b7e6e9ce}\label{API__delay_8h_afecaa44225b94ebfb354e4b6b7e6e9ce} 
+\index{API\_delay.h@{API\_delay.h}!delayRead@{delayRead}}
+\index{delayRead@{delayRead}!API\_delay.h@{API\_delay.h}}
+\doxysubsubsection{\texorpdfstring{delayRead()}{delayRead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{API__delay_8h_a2b21255bd7f7192db778983b15089208}{bool\+\_\+t}} delay\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{delay }\end{DoxyParamCaption})}
+
+
+
+Verifica si se completa el retardo configurado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Puntero} & a la estructura \doxylink{structdelay__t}{delay\+\_\+t} donde se almacena información del retardo \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em bool\+\_\+t} & donde true si se ha completado y false en el caso contrario \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{API__delay_8h_a2af041ac01bb3db8ecf87ce371fac67d}\label{API__delay_8h_a2af041ac01bb3db8ecf87ce371fac67d} 
+\index{API\_delay.h@{API\_delay.h}!delayWrite@{delayWrite}}
+\index{delayWrite@{delayWrite}!API\_delay.h@{API\_delay.h}}
+\doxysubsubsection{\texorpdfstring{delayWrite()}{delayWrite()}}
+{\footnotesize\ttfamily void delay\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{delay,  }\item[{\mbox{\hyperlink{API__delay_8h_a451a7d205dfb766727eba25c6e61c687}{tick\+\_\+t}}}]{duration }\end{DoxyParamCaption})}
+
+
+
+Cambia la duración de un retardo existente. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Puntero} & a la estructura \doxylink{structdelay__t}{delay\+\_\+t} donde se almacena información del retardo \\
+\hline
+{\em Duración} & del retardo (expresado en ms) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em Ninguno} & \\
+\hline
+\end{DoxyRetVals}

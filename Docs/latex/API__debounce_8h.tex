@@ -1,0 +1,56 @@
+\doxysection{Referencia del archivo Drivers/\+API/\+Inc/\+API\+\_\+debounce.h}
+\hypertarget{API__debounce_8h}{}\label{API__debounce_8h}\index{Drivers/API/Inc/API\_debounce.h@{Drivers/API/Inc/API\_debounce.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include "{}API\+\_\+delay.\+h"{}}\newline
+{\ttfamily \#include "{}API\+\_\+uart.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{API__debounce_8h_a8e3ca4463f914075e1c4b1388811728e}{debounce\+FSM\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa la maquina de estados finito. Nota\+: se debe llamar antes que \doxylink{API__debounce_8h_a6a1126f7ed9f93be4cd42651ecb5ed6f}{debounce\+FSM\+\_\+update()} o \doxylink{API__debounce_8h_ada13dbdbe1db700bf44255cc2cc02252}{read\+Key()}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__debounce_8h_a6a1126f7ed9f93be4cd42651ecb5ed6f}{debounce\+FSM\+\_\+update}} ()
+\begin{DoxyCompactList}\small\item\em Actualiza la maquina de estados finito. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{API__delay_8h_a2b21255bd7f7192db778983b15089208}{bool\+\_\+t}} \mbox{\hyperlink{API__debounce_8h_ada13dbdbe1db700bf44255cc2cc02252}{read\+Key}} ()
+\begin{DoxyCompactList}\small\item\em Lee una variable interna del módulo y devolver true o false si la tecla fue presionada. Si devuelve true, resetea (poner en false) el estado de la variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{API__debounce_8h_a8e3ca4463f914075e1c4b1388811728e}\label{API__debounce_8h_a8e3ca4463f914075e1c4b1388811728e} 
+\index{API\_debounce.h@{API\_debounce.h}!debounceFSM\_init@{debounceFSM\_init}}
+\index{debounceFSM\_init@{debounceFSM\_init}!API\_debounce.h@{API\_debounce.h}}
+\doxysubsubsection{\texorpdfstring{debounceFSM\_init()}{debounceFSM\_init()}}
+{\footnotesize\ttfamily void debounce\+FSM\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa la maquina de estados finito. Nota\+: se debe llamar antes que \doxylink{API__debounce_8h_a6a1126f7ed9f93be4cd42651ecb5ed6f}{debounce\+FSM\+\_\+update()} o \doxylink{API__debounce_8h_ada13dbdbe1db700bf44255cc2cc02252}{read\+Key()}. 
+
+\begin{DoxyReturn}{Devuelve}
+void. 
+\end{DoxyReturn}
+\Hypertarget{API__debounce_8h_a6a1126f7ed9f93be4cd42651ecb5ed6f}\label{API__debounce_8h_a6a1126f7ed9f93be4cd42651ecb5ed6f} 
+\index{API\_debounce.h@{API\_debounce.h}!debounceFSM\_update@{debounceFSM\_update}}
+\index{debounceFSM\_update@{debounceFSM\_update}!API\_debounce.h@{API\_debounce.h}}
+\doxysubsubsection{\texorpdfstring{debounceFSM\_update()}{debounceFSM\_update()}}
+{\footnotesize\ttfamily void debounce\+FSM\+\_\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Actualiza la maquina de estados finito. 
+
+\begin{DoxyReturn}{Devuelve}
+void. 
+\end{DoxyReturn}
+\Hypertarget{API__debounce_8h_ada13dbdbe1db700bf44255cc2cc02252}\label{API__debounce_8h_ada13dbdbe1db700bf44255cc2cc02252} 
+\index{API\_debounce.h@{API\_debounce.h}!readKey@{readKey}}
+\index{readKey@{readKey}!API\_debounce.h@{API\_debounce.h}}
+\doxysubsubsection{\texorpdfstring{readKey()}{readKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{API__delay_8h_a2b21255bd7f7192db778983b15089208}{bool\+\_\+t}} read\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lee una variable interna del módulo y devolver true o false si la tecla fue presionada. Si devuelve true, resetea (poner en false) el estado de la variable. 
+
+\begin{DoxyReturn}{Devuelve}
+bool\+\_\+t donde especifica si la tecla fue presionada o no.. 
+\end{DoxyReturn}

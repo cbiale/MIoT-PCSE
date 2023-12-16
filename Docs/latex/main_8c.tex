@@ -1,0 +1,193 @@
+\doxysection{Referencia del archivo Core/\+Src/main.c}
+\hypertarget{main_8c}{}\label{main_8c}\index{Core/Src/main.c@{Core/Src/main.c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include "{}string.\+h"{}}\newline
+{\ttfamily \#include "{}API\+\_\+sistema.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_ae89fdd15729ad41a66911190fcbab23a}{MX\+\_\+\+GPIO\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em GPIO Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a3a68950ead69b4a7fd8aca513666c7d4}{MX\+\_\+\+ETH\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em ETH Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a03b71abc2ed6e7a94a08e94b1d74542f}{MX\+\_\+\+USB\+\_\+\+OTG\+\_\+\+FS\+\_\+\+PCD\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em USB\+\_\+\+OTG\+\_\+\+FS Initialization Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ETH\+\_\+\+Tx\+Packet\+Config \mbox{\hyperlink{main_8c_a9ed19a93e08023302057789fb61f1ddd}{Tx\+Config}}
+\item 
+ETH\+\_\+\+DMADesc\+Type\+Def \mbox{\hyperlink{main_8c_a550b97d92dd5bed5e62cadc8497019d4}{DMARx\+Dscr\+Tab}} \mbox{[}ETH\+\_\+\+RX\+\_\+\+DESC\+\_\+\+CNT\mbox{]}
+\item 
+ETH\+\_\+\+DMADesc\+Type\+Def \mbox{\hyperlink{main_8c_a2d73692f0b0c2670e88c8d9694ea6784}{DMATx\+Dscr\+Tab}} \mbox{[}ETH\+\_\+\+TX\+\_\+\+DESC\+\_\+\+CNT\mbox{]}
+\item 
+ETH\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a3605d86556d96074ff098be46eca2837}{heth}}
+\item 
+PCD\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a3ec0d70a6cb9406d997fb3d006cc940d}{hpcd\+\_\+\+USB\+\_\+\+OTG\+\_\+\+FS}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\+: Main program body 
+
+\begin{DoxyAttention}{Atención}
+
+\end{DoxyAttention}
+Copyright (c) 2023 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a3a68950ead69b4a7fd8aca513666c7d4}\label{main_8c_a3a68950ead69b4a7fd8aca513666c7d4} 
+\index{main.c@{main.c}!MX\_ETH\_Init@{MX\_ETH\_Init}}
+\index{MX\_ETH\_Init@{MX\_ETH\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_ETH\_Init()}{MX\_ETH\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+ETH\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ETH Initialization Function. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_ae89fdd15729ad41a66911190fcbab23a}\label{main_8c_ae89fdd15729ad41a66911190fcbab23a} 
+\index{main.c@{main.c}!MX\_GPIO\_Init@{MX\_GPIO\_Init}}
+\index{MX\_GPIO\_Init@{MX\_GPIO\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_GPIO\_Init()}{MX\_GPIO\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+GPIO\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+GPIO Initialization Function. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a03b71abc2ed6e7a94a08e94b1d74542f}\label{main_8c_a03b71abc2ed6e7a94a08e94b1d74542f} 
+\index{main.c@{main.c}!MX\_USB\_OTG\_FS\_PCD\_Init@{MX\_USB\_OTG\_FS\_PCD\_Init}}
+\index{MX\_USB\_OTG\_FS\_PCD\_Init@{MX\_USB\_OTG\_FS\_PCD\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_USB\_OTG\_FS\_PCD\_Init()}{MX\_USB\_OTG\_FS\_PCD\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+USB\+\_\+\+OTG\+\_\+\+FS\+\_\+\+PCD\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+USB\+\_\+\+OTG\+\_\+\+FS Initialization Function. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Initializes the RCC Oscillators according to the specified parameters in the \doxylink{structRCC__OscInitTypeDef}{RCC\+\_\+\+Osc\+Init\+Type\+Def} structure.
+
+Initializes the CPU, AHB and APB buses clocks
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{main_8c_a550b97d92dd5bed5e62cadc8497019d4}\label{main_8c_a550b97d92dd5bed5e62cadc8497019d4} 
+\index{main.c@{main.c}!DMARxDscrTab@{DMARxDscrTab}}
+\index{DMARxDscrTab@{DMARxDscrTab}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{DMARxDscrTab}{DMARxDscrTab}}
+{\footnotesize\ttfamily ETH\+\_\+\+DMADesc\+Type\+Def DMARx\+Dscr\+Tab\mbox{[}ETH\+\_\+\+RX\+\_\+\+DESC\+\_\+\+CNT\mbox{]}}
+
+\Hypertarget{main_8c_a2d73692f0b0c2670e88c8d9694ea6784}\label{main_8c_a2d73692f0b0c2670e88c8d9694ea6784} 
+\index{main.c@{main.c}!DMATxDscrTab@{DMATxDscrTab}}
+\index{DMATxDscrTab@{DMATxDscrTab}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{DMATxDscrTab}{DMATxDscrTab}}
+{\footnotesize\ttfamily ETH\+\_\+\+DMADesc\+Type\+Def DMATx\+Dscr\+Tab\mbox{[}ETH\+\_\+\+TX\+\_\+\+DESC\+\_\+\+CNT\mbox{]}}
+
+\Hypertarget{main_8c_a3605d86556d96074ff098be46eca2837}\label{main_8c_a3605d86556d96074ff098be46eca2837} 
+\index{main.c@{main.c}!heth@{heth}}
+\index{heth@{heth}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{heth}{heth}}
+{\footnotesize\ttfamily ETH\+\_\+\+Handle\+Type\+Def heth}
+
+\Hypertarget{main_8c_a3ec0d70a6cb9406d997fb3d006cc940d}\label{main_8c_a3ec0d70a6cb9406d997fb3d006cc940d} 
+\index{main.c@{main.c}!hpcd\_USB\_OTG\_FS@{hpcd\_USB\_OTG\_FS}}
+\index{hpcd\_USB\_OTG\_FS@{hpcd\_USB\_OTG\_FS}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hpcd\_USB\_OTG\_FS}{hpcd\_USB\_OTG\_FS}}
+{\footnotesize\ttfamily PCD\+\_\+\+Handle\+Type\+Def hpcd\+\_\+\+USB\+\_\+\+OTG\+\_\+\+FS}
+
+\Hypertarget{main_8c_a9ed19a93e08023302057789fb61f1ddd}\label{main_8c_a9ed19a93e08023302057789fb61f1ddd} 
+\index{main.c@{main.c}!TxConfig@{TxConfig}}
+\index{TxConfig@{TxConfig}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{TxConfig}{TxConfig}}
+{\footnotesize\ttfamily ETH\+\_\+\+Tx\+Packet\+Config Tx\+Config}
+

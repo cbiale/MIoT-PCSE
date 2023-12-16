@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Final: Archivo de código fuente Drivers/API/Inc/API_debounce.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Proyecto Final<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">PCSE - Proyecto final</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_60925fc218da8ca7908795bf5f624060.html">Drivers</a></li><li class="navelem"><a class="el" href="dir_9c636daed8643477636976788dd786b5.html">API</a></li><li class="navelem"><a class="el" href="dir_d9371129cf467a7f638f33645fb2a8d3.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">API_debounce.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="API__debounce_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * API_debounce.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *  Created on: Nov 8, 2023</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *      Author: cbiale</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef API_INC_API_DEBOUNCE_H_</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define API_INC_API_DEBOUNCE_H_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span> <span class="comment">// por uso de bool_t</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="API__delay_8h.html">API_delay.h</a>&quot;</span> <span class="comment">// por uso de retardos</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="API__uart_8h.html">API_uart.h</a>&quot;</span> <span class="comment">// por uso de funciones de UART</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="API__debounce_8h.html#a8e3ca4463f914075e1c4b1388811728e">debounceFSM_init</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="API__debounce_8h.html#a6a1126f7ed9f93be4cd42651ecb5ed6f">debounceFSM_update</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><a class="code hl_typedef" href="API__delay_8h.html#a2b21255bd7f7192db778983b15089208">bool_t</a> <a class="code hl_function" href="API__debounce_8h.html#ada13dbdbe1db700bf44255cc2cc02252">readKey</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif </span><span class="comment">/* API_INC_API_DEBOUNCE_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aAPI__debounce_8h_html_a6a1126f7ed9f93be4cd42651ecb5ed6f"><div class="ttname"><a href="API__debounce_8h.html#a6a1126f7ed9f93be4cd42651ecb5ed6f">debounceFSM_update</a></div><div class="ttdeci">void debounceFSM_update()</div><div class="ttdoc">Actualiza la maquina de estados finito.</div><div class="ttdef"><b>Definition</b> API_debounce.c:76</div></div>
+<div class="ttc" id="aAPI__debounce_8h_html_a8e3ca4463f914075e1c4b1388811728e"><div class="ttname"><a href="API__debounce_8h.html#a8e3ca4463f914075e1c4b1388811728e">debounceFSM_init</a></div><div class="ttdeci">void debounceFSM_init()</div><div class="ttdoc">Inicializa la maquina de estados finito. Nota: se debe llamar antes que debounceFSM_update() o readKe...</div><div class="ttdef"><b>Definition</b> API_debounce.c:62</div></div>
+<div class="ttc" id="aAPI__debounce_8h_html_ada13dbdbe1db700bf44255cc2cc02252"><div class="ttname"><a href="API__debounce_8h.html#ada13dbdbe1db700bf44255cc2cc02252">readKey</a></div><div class="ttdeci">bool_t readKey()</div><div class="ttdoc">Lee una variable interna del módulo y devolver true o false si la tecla fue presionada....</div><div class="ttdef"><b>Definition</b> API_debounce.c:136</div></div>
+<div class="ttc" id="aAPI__delay_8h_html"><div class="ttname"><a href="API__delay_8h.html">API_delay.h</a></div></div>
+<div class="ttc" id="aAPI__delay_8h_html_a2b21255bd7f7192db778983b15089208"><div class="ttname"><a href="API__delay_8h.html#a2b21255bd7f7192db778983b15089208">bool_t</a></div><div class="ttdeci">bool bool_t</div><div class="ttdoc">Tipo de datos que define un valor lógico.</div><div class="ttdef"><b>Definition</b> API_delay.h:26</div></div>
+<div class="ttc" id="aAPI__uart_8h_html"><div class="ttname"><a href="API__uart_8h.html">API_uart.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

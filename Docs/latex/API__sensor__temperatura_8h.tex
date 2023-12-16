@@ -1,0 +1,80 @@
+\doxysection{Referencia del archivo Drivers/\+API/\+Inc/\+API\+\_\+sensor\+\_\+temperatura.h}
+\hypertarget{API__sensor__temperatura_8h}{}\label{API__sensor__temperatura_8h}\index{Drivers/API/Inc/API\_sensor\_temperatura.h@{Drivers/API/Inc/API\_sensor\_temperatura.h}}
+{\ttfamily \#include "{}port.\+h"{}}\newline
+{\ttfamily \#include "{}API\+\_\+delay.\+h"{}}\newline
+{\ttfamily \#include "{}API\+\_\+uart.\+h"{}}\newline
+{\ttfamily \#include "{}stdbool.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{API__sensor__temperatura_8h_a9202876d2c0ec54020b1f2b2e5a798df}{sensor\+\_\+temperatura\+\_\+iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Inicia el sensor de temperatura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__sensor__temperatura_8h_ad8212b010fbed300db174c84d1ef31d3}{sensor\+\_\+temperatura\+\_\+actualizar}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene los datos del sensor y deja disponible los valores obtenidos. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{API__sensor__temperatura_8h_adfdbb6957889d01e2bc1f55999929cf7}{sensor\+\_\+temperatura\+\_\+obtener\+\_\+temperatura}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la temperatura actual desde el sensor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{API__sensor__temperatura_8h_ab9786aab5c7b7d829916862f7a088107}{sensor\+\_\+temperatura\+\_\+nueva\+\_\+lectura}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la secuencia de lectura del sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{API__sensor__temperatura_8h_ad8212b010fbed300db174c84d1ef31d3}\label{API__sensor__temperatura_8h_ad8212b010fbed300db174c84d1ef31d3} 
+\index{API\_sensor\_temperatura.h@{API\_sensor\_temperatura.h}!sensor\_temperatura\_actualizar@{sensor\_temperatura\_actualizar}}
+\index{sensor\_temperatura\_actualizar@{sensor\_temperatura\_actualizar}!API\_sensor\_temperatura.h@{API\_sensor\_temperatura.h}}
+\doxysubsubsection{\texorpdfstring{sensor\_temperatura\_actualizar()}{sensor\_temperatura\_actualizar()}}
+{\footnotesize\ttfamily void sensor\+\_\+temperatura\+\_\+actualizar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene los datos del sensor y deja disponible los valores obtenidos. 
+
+Realiza las operaciones necesarias para obtener los datos del sensor y actualiza las variables que contienen los datos de temperatura.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__sensor__temperatura_8h_a9202876d2c0ec54020b1f2b2e5a798df}\label{API__sensor__temperatura_8h_a9202876d2c0ec54020b1f2b2e5a798df} 
+\index{API\_sensor\_temperatura.h@{API\_sensor\_temperatura.h}!sensor\_temperatura\_iniciar@{sensor\_temperatura\_iniciar}}
+\index{sensor\_temperatura\_iniciar@{sensor\_temperatura\_iniciar}!API\_sensor\_temperatura.h@{API\_sensor\_temperatura.h}}
+\doxysubsubsection{\texorpdfstring{sensor\_temperatura\_iniciar()}{sensor\_temperatura\_iniciar()}}
+{\footnotesize\ttfamily void sensor\+\_\+temperatura\+\_\+iniciar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia el sensor de temperatura. 
+
+Realiza las operaciones necesarias para iniciar el sensor de temperatura.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__sensor__temperatura_8h_ab9786aab5c7b7d829916862f7a088107}\label{API__sensor__temperatura_8h_ab9786aab5c7b7d829916862f7a088107} 
+\index{API\_sensor\_temperatura.h@{API\_sensor\_temperatura.h}!sensor\_temperatura\_nueva\_lectura@{sensor\_temperatura\_nueva\_lectura}}
+\index{sensor\_temperatura\_nueva\_lectura@{sensor\_temperatura\_nueva\_lectura}!API\_sensor\_temperatura.h@{API\_sensor\_temperatura.h}}
+\doxysubsubsection{\texorpdfstring{sensor\_temperatura\_nueva\_lectura()}{sensor\_temperatura\_nueva\_lectura()}}
+{\footnotesize\ttfamily uint8\+\_\+t sensor\+\_\+temperatura\+\_\+nueva\+\_\+lectura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene la secuencia de lectura del sensor. 
+
+Retorna la secuencia de lectura del sensor, se usa para controlar si hay una nueva lectura.
+
+\begin{DoxyReturn}{Devuelve}
+Secuencia de lectura actual. 
+\end{DoxyReturn}
+\Hypertarget{API__sensor__temperatura_8h_adfdbb6957889d01e2bc1f55999929cf7}\label{API__sensor__temperatura_8h_adfdbb6957889d01e2bc1f55999929cf7} 
+\index{API\_sensor\_temperatura.h@{API\_sensor\_temperatura.h}!sensor\_temperatura\_obtener\_temperatura@{sensor\_temperatura\_obtener\_temperatura}}
+\index{sensor\_temperatura\_obtener\_temperatura@{sensor\_temperatura\_obtener\_temperatura}!API\_sensor\_temperatura.h@{API\_sensor\_temperatura.h}}
+\doxysubsubsection{\texorpdfstring{sensor\_temperatura\_obtener\_temperatura()}{sensor\_temperatura\_obtener\_temperatura()}}
+{\footnotesize\ttfamily float sensor\+\_\+temperatura\+\_\+obtener\+\_\+temperatura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene la temperatura actual desde el sensor. 
+
+Retorna la temperatura actual medida por el sensor.
+
+\begin{DoxyReturn}{Devuelve}
+Temperatura actual en grados Celsius (float). 
+\end{DoxyReturn}

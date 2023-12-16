@@ -1,0 +1,33 @@
+\doxysection{API\+\_\+uart.\+h}
+\hypertarget{API__uart_8h_source}{}\label{API__uart_8h_source}\index{Drivers/API/Inc/API\_uart.h@{Drivers/API/Inc/API\_uart.h}}
+\mbox{\hyperlink{API__uart_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ API\_uart.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Nov\ 16,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ cbiale}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ API\_INC\_API\_UART\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ API\_INC\_API\_UART\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdbool.h>}\ \ \textcolor{comment}{//\ por\ uso\ de\ bool\_t}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string.h>}\ \ \ \textcolor{comment}{//\ por\ uso\ de\ strlen()}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdio.h>}\ \ \ \ \textcolor{comment}{//\ por\ uso\ de\ snprintf()}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <inttypes.h>}\ \textcolor{comment}{//\ para\ imprimir\ valores\ uint\_t\ al\ usar\ snprintf()}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{port_8h}{port.h}}"{}}\ \ \ \ \ \textcolor{comment}{//\ manejador\ de\ errores}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{API__uart_8h_a2b21255bd7f7192db778983b15089208}{bool\_t}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00028\ \mbox{\hyperlink{API__delay_8h_a2b21255bd7f7192db778983b15089208}{bool\_t}}\ \mbox{\hyperlink{API__uart_8h_a0d0d1729b247ca7932b836a48e45b6b6}{uart\_iniciar}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{API__uart_8h_aec0f5bb7e6bdf17e7edef5ee20c0acea}{uart\_enviar\_string}}\ (uint8\_t\ *\ pstring);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{API__uart_8h_afa4dc471f073e01bf91b980cedad0427}{uart\_enviar\_string\_tamano}}(uint8\_t\ *\ pstring,\ uint16\_t\ size);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{API__uart_8h_a800b571054b16acaaead12913d453ca6}{uart\_recibir\_string\_tamano}}(uint8\_t\ *\ pstring,\ uint16\_t\ size);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ API\_INC\_API\_UART\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

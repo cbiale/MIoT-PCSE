@@ -1,0 +1,97 @@
+\doxysection{Referencia del archivo Drivers/\+API/\+Inc/\+API\+\_\+sensor\+\_\+fake.h}
+\hypertarget{API__sensor__fake_8h}{}\label{API__sensor__fake_8h}\index{Drivers/API/Inc/API\_sensor\_fake.h@{Drivers/API/Inc/API\_sensor\_fake.h}}
+{\ttfamily \#include "{}port.\+h"{}}\newline
+{\ttfamily \#include "{}API\+\_\+delay.\+h"{}}\newline
+{\ttfamily \#include "{}API\+\_\+uart.\+h"{}}\newline
+{\ttfamily \#include "{}stdbool.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{API__sensor__fake_8h_a0715b0d1b3e07241a996e1aa448d5b45}{sensor\+\_\+fake\+\_\+iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Inicia el sensor fake. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__sensor__fake_8h_a96e1038ef9e1a792bd46fd82cc530bda}{sensor\+\_\+fake\+\_\+actualizar}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene los datos del sensor fake y deja disponible los valores obtenidos. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{API__sensor__fake_8h_aaafa643b5ac459d720d1651e5edcb3cd}{sensor\+\_\+fake\+\_\+obtener\+\_\+temperatura}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la temperatura actual desde el sensor fake. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{API__sensor__fake_8h_a96242ddf182a04f3e95896b527635aa2}{sensor\+\_\+fake\+\_\+obtener\+\_\+humedad}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la humedad actual desde el sensor fake. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{API__sensor__fake_8h_a66f9621fe4e127d57787a20b173231b6}{sensor\+\_\+fake\+\_\+nueva\+\_\+lectura}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la secuencia de lectura del sensor fake. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{API__sensor__fake_8h_a96e1038ef9e1a792bd46fd82cc530bda}\label{API__sensor__fake_8h_a96e1038ef9e1a792bd46fd82cc530bda} 
+\index{API\_sensor\_fake.h@{API\_sensor\_fake.h}!sensor\_fake\_actualizar@{sensor\_fake\_actualizar}}
+\index{sensor\_fake\_actualizar@{sensor\_fake\_actualizar}!API\_sensor\_fake.h@{API\_sensor\_fake.h}}
+\doxysubsubsection{\texorpdfstring{sensor\_fake\_actualizar()}{sensor\_fake\_actualizar()}}
+{\footnotesize\ttfamily void sensor\+\_\+fake\+\_\+actualizar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene los datos del sensor fake y deja disponible los valores obtenidos. 
+
+Realiza las operaciones necesarias para obtener los datos del sensor fake y actualiza las variables que contienen los datos de temperatura y humedad.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__sensor__fake_8h_a0715b0d1b3e07241a996e1aa448d5b45}\label{API__sensor__fake_8h_a0715b0d1b3e07241a996e1aa448d5b45} 
+\index{API\_sensor\_fake.h@{API\_sensor\_fake.h}!sensor\_fake\_iniciar@{sensor\_fake\_iniciar}}
+\index{sensor\_fake\_iniciar@{sensor\_fake\_iniciar}!API\_sensor\_fake.h@{API\_sensor\_fake.h}}
+\doxysubsubsection{\texorpdfstring{sensor\_fake\_iniciar()}{sensor\_fake\_iniciar()}}
+{\footnotesize\ttfamily void sensor\+\_\+fake\+\_\+iniciar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia el sensor fake. 
+
+Realiza las operaciones necesarias para iniciar el sensor fake.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__sensor__fake_8h_a66f9621fe4e127d57787a20b173231b6}\label{API__sensor__fake_8h_a66f9621fe4e127d57787a20b173231b6} 
+\index{API\_sensor\_fake.h@{API\_sensor\_fake.h}!sensor\_fake\_nueva\_lectura@{sensor\_fake\_nueva\_lectura}}
+\index{sensor\_fake\_nueva\_lectura@{sensor\_fake\_nueva\_lectura}!API\_sensor\_fake.h@{API\_sensor\_fake.h}}
+\doxysubsubsection{\texorpdfstring{sensor\_fake\_nueva\_lectura()}{sensor\_fake\_nueva\_lectura()}}
+{\footnotesize\ttfamily uint8\+\_\+t sensor\+\_\+fake\+\_\+nueva\+\_\+lectura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene la secuencia de lectura del sensor fake. 
+
+Retorna la secuencia de lectura del sensor fake, se usa para controlar si hay una nueva lectura.
+
+\begin{DoxyReturn}{Devuelve}
+Secuencia de lectura actual. 
+\end{DoxyReturn}
+\Hypertarget{API__sensor__fake_8h_a96242ddf182a04f3e95896b527635aa2}\label{API__sensor__fake_8h_a96242ddf182a04f3e95896b527635aa2} 
+\index{API\_sensor\_fake.h@{API\_sensor\_fake.h}!sensor\_fake\_obtener\_humedad@{sensor\_fake\_obtener\_humedad}}
+\index{sensor\_fake\_obtener\_humedad@{sensor\_fake\_obtener\_humedad}!API\_sensor\_fake.h@{API\_sensor\_fake.h}}
+\doxysubsubsection{\texorpdfstring{sensor\_fake\_obtener\_humedad()}{sensor\_fake\_obtener\_humedad()}}
+{\footnotesize\ttfamily float sensor\+\_\+fake\+\_\+obtener\+\_\+humedad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene la humedad actual desde el sensor fake. 
+
+Retorna la humedad actual medida por el sensor fake.
+
+\begin{DoxyReturn}{Devuelve}
+Humedad actual en porcentaje (float). 
+\end{DoxyReturn}
+\Hypertarget{API__sensor__fake_8h_aaafa643b5ac459d720d1651e5edcb3cd}\label{API__sensor__fake_8h_aaafa643b5ac459d720d1651e5edcb3cd} 
+\index{API\_sensor\_fake.h@{API\_sensor\_fake.h}!sensor\_fake\_obtener\_temperatura@{sensor\_fake\_obtener\_temperatura}}
+\index{sensor\_fake\_obtener\_temperatura@{sensor\_fake\_obtener\_temperatura}!API\_sensor\_fake.h@{API\_sensor\_fake.h}}
+\doxysubsubsection{\texorpdfstring{sensor\_fake\_obtener\_temperatura()}{sensor\_fake\_obtener\_temperatura()}}
+{\footnotesize\ttfamily float sensor\+\_\+fake\+\_\+obtener\+\_\+temperatura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene la temperatura actual desde el sensor fake. 
+
+Retorna la temperatura actual medida por el sensor fake.
+
+\begin{DoxyReturn}{Devuelve}
+Temperatura actual en grados Celsius (float). 
+\end{DoxyReturn}

@@ -1,0 +1,63 @@
+\doxysection{Referencia del archivo Drivers/\+API/\+Inc/\+API\+\_\+interfaz.h}
+\hypertarget{API__interfaz_8h}{}\label{API__interfaz_8h}\index{Drivers/API/Inc/API\_interfaz.h@{Drivers/API/Inc/API\_interfaz.h}}
+{\ttfamily \#include $<$API\+\_\+sensor\+\_\+temperatura.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}stdbool.\+h"{}}\newline
+{\ttfamily \#include "{}API\+\_\+debounce.\+h"{}}\newline
+{\ttfamily \#include "{}API\+\_\+lcd.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{API__interfaz_8h_a59aa9c327f8c0beeae9de10b2effb30f}{interfaz\+\_\+iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Inicia la interfaz de usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__interfaz_8h_acde8e2cdadec0ddcb8353dfa9511ba59}{interfaz\+\_\+actualizar}} ()
+\begin{DoxyCompactList}\small\item\em Actualiza la interfaz de usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{API__interfaz_8h_acde8e2cdadec0ddcb8353dfa9511ba59}\label{API__interfaz_8h_acde8e2cdadec0ddcb8353dfa9511ba59} 
+\index{API\_interfaz.h@{API\_interfaz.h}!interfaz\_actualizar@{interfaz\_actualizar}}
+\index{interfaz\_actualizar@{interfaz\_actualizar}!API\_interfaz.h@{API\_interfaz.h}}
+\doxysubsubsection{\texorpdfstring{interfaz\_actualizar()}{interfaz\_actualizar()}}
+{\footnotesize\ttfamily void interfaz\+\_\+actualizar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Actualiza la interfaz de usuario. 
+
+Realiza las operaciones necesarias para actualizar la interfaz de usuario. Esto incluye la actualización de elementos visuales.
+
+\begin{DoxyReturn}{Devuelve}
+void Ejemplo de uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{API__interfaz_8h_acde8e2cdadec0ddcb8353dfa9511ba59}{interfaz\_actualizar}}();}
+
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\Hypertarget{API__interfaz_8h_a59aa9c327f8c0beeae9de10b2effb30f}\label{API__interfaz_8h_a59aa9c327f8c0beeae9de10b2effb30f} 
+\index{API\_interfaz.h@{API\_interfaz.h}!interfaz\_iniciar@{interfaz\_iniciar}}
+\index{interfaz\_iniciar@{interfaz\_iniciar}!API\_interfaz.h@{API\_interfaz.h}}
+\doxysubsubsection{\texorpdfstring{interfaz\_iniciar()}{interfaz\_iniciar()}}
+{\footnotesize\ttfamily void interfaz\+\_\+iniciar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia la interfaz de usuario. 
+
+Esta función se encarga de realizar las operaciones necesarias para iniciar la interfaz de usuario.
+
+\begin{DoxyReturn}{Devuelve}
+void
+\end{DoxyReturn}
+\begin{DoxyNote}{Nota}
+Asegúrate de llamar a esta función antes de comenzar cualquier operación en la interfaz de usuario. 
+
+Debe llamarse luego de inicializar los periféricos de la aplicación.
+\end{DoxyNote}
+Ejemplo de uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{API__interfaz_8h_a59aa9c327f8c0beeae9de10b2effb30f}{interfaz\_iniciar}}();}
+
+\end{DoxyCode}
+ 

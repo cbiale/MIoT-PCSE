@@ -1,0 +1,63 @@
+\doxysection{Referencia del archivo Drivers/\+API/\+Inc/\+API\+\_\+sistema.h}
+\hypertarget{API__sistema_8h}{}\label{API__sistema_8h}\index{Drivers/API/Inc/API\_sistema.h@{Drivers/API/Inc/API\_sistema.h}}
+{\ttfamily \#include $<$API\+\_\+interfaz.\+h$>$}\newline
+{\ttfamily \#include $<$API\+\_\+sensor\+\_\+temperatura.\+h$>$}\newline
+{\ttfamily \#include "{}API\+\_\+debounce.\+h"{}}\newline
+{\ttfamily \#include "{}API\+\_\+delay.\+h"{}}\newline
+{\ttfamily \#include "{}API\+\_\+lcd.\+h"{}}\newline
+{\ttfamily \#include "{}API\+\_\+uart.\+h"{}}\newline
+{\ttfamily \#include "{}port.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{API__sistema_8h_add10b177e4ce2625f48c2d947938de53}{sistema\+\_\+iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Inicia el sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__sistema_8h_a0203b25250ef212d6a9301ed5c5cadf7}{sistema\+\_\+actualizar}} ()
+\begin{DoxyCompactList}\small\item\em Actualiza el estado del sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{API__sistema_8h_a0203b25250ef212d6a9301ed5c5cadf7}\label{API__sistema_8h_a0203b25250ef212d6a9301ed5c5cadf7} 
+\index{API\_sistema.h@{API\_sistema.h}!sistema\_actualizar@{sistema\_actualizar}}
+\index{sistema\_actualizar@{sistema\_actualizar}!API\_sistema.h@{API\_sistema.h}}
+\doxysubsubsection{\texorpdfstring{sistema\_actualizar()}{sistema\_actualizar()}}
+{\footnotesize\ttfamily void sistema\+\_\+actualizar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Actualiza el estado del sistema. 
+
+Realiza las operaciones necesarias para actualizar el estado del sistema. Verifica si se debe leer el sensor, actualiza de ser necesario la pantalla y controla el pulsado de botones.
+
+\begin{DoxyReturn}{Devuelve}
+void
+\end{DoxyReturn}
+Ejemplo de uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{API__sistema_8h_a0203b25250ef212d6a9301ed5c5cadf7}{sistema\_actualizar}}();}
+
+\end{DoxyCode}
+ \Hypertarget{API__sistema_8h_add10b177e4ce2625f48c2d947938de53}\label{API__sistema_8h_add10b177e4ce2625f48c2d947938de53} 
+\index{API\_sistema.h@{API\_sistema.h}!sistema\_iniciar@{sistema\_iniciar}}
+\index{sistema\_iniciar@{sistema\_iniciar}!API\_sistema.h@{API\_sistema.h}}
+\doxysubsubsection{\texorpdfstring{sistema\_iniciar()}{sistema\_iniciar()}}
+{\footnotesize\ttfamily void sistema\+\_\+iniciar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia el sistema. 
+
+Esta función se encarga de realizar las operaciones necesarias para iniciar los perifericos del sistema.
+
+\begin{DoxyReturn}{Devuelve}
+void
+\end{DoxyReturn}
+\begin{DoxyNote}{Nota}
+Asegúrate de llamar a esta función antes de comenzar cualquier operación en el sistema.
+\end{DoxyNote}
+Ejemplo de uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{API__sistema_8h_add10b177e4ce2625f48c2d947938de53}{sistema\_iniciar}}();}
+
+\end{DoxyCode}
+ 

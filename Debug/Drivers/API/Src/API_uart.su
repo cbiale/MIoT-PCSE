@@ -1,0 +1,5 @@
+../Drivers/API/Src/API_uart.c:16:8:uart_iniciar	112	static
+../Drivers/API/Src/API_uart.c:55:6:uart_enviar_string	16	static
+../Drivers/API/Src/API_uart.c:64:6:uart_enviar_string_tamano	24	static
+../Drivers/API/Src/API_uart.c:85:6:uart_recibir_string_tamano	16	static
+../Drivers/API/Src/API_uart.c:90:6:uart_actualizar	4	static

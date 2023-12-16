@@ -1,0 +1,113 @@
+\doxysection{Referencia del archivo Drivers/\+API/\+Inc/\+API\+\_\+lcd.h}
+\hypertarget{API__lcd_8h}{}\label{API__lcd_8h}\index{Drivers/API/Inc/API\_lcd.h@{Drivers/API/Inc/API\_lcd.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$port.\+h$>$}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{API__lcd_8h_ab13b0ce7acc90c62cd400c3a3465cc60}{lcd\+\_\+iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa la pantalla del LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__lcd_8h_a552f29803075cd1281b77739e76bb94b}{lcd\+\_\+limpiar}} ()
+\begin{DoxyCompactList}\small\item\em Limpia la pantalla del LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__lcd_8h_ad300f3e1cf5379308b58a0215c80e188}{lcd\+\_\+ubicar}} (uint8\+\_\+t fila, uint8\+\_\+t columna)
+\begin{DoxyCompactList}\small\item\em Ubica el cursor en una posición específica del LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__lcd_8h_a13d79f90715afff1ef4d5d6c28ca71a1}{lcd\+\_\+escribir\+\_\+string}} (const char \texorpdfstring{$\ast$}{*}cadena)
+\begin{DoxyCompactList}\small\item\em Escribe una cadena de texto en el LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__lcd_8h_aa33113f1b13552bd72cd5e4487b954c9}{lcd\+\_\+luz\+\_\+fondo}} (bool \mbox{\hyperlink{API__debounce_8c_ab3b801ff5a30ac7b78184a2307486771}{estado}})
+\begin{DoxyCompactList}\small\item\em Controla el estado de la luz de fondo del LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{API__lcd_8h_a13d79f90715afff1ef4d5d6c28ca71a1}\label{API__lcd_8h_a13d79f90715afff1ef4d5d6c28ca71a1} 
+\index{API\_lcd.h@{API\_lcd.h}!lcd\_escribir\_string@{lcd\_escribir\_string}}
+\index{lcd\_escribir\_string@{lcd\_escribir\_string}!API\_lcd.h@{API\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_escribir\_string()}{lcd\_escribir\_string()}}
+{\footnotesize\ttfamily void lcd\+\_\+escribir\+\_\+string (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{cadena }\end{DoxyParamCaption})}
+
+
+
+Escribe una cadena de texto en el LCD. 
+
+Esta función recorre cada caracter de la cadena y envía cada caracter como dato al LCD.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cadena} & Cadena de caracteres a escribir en el LCD.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__lcd_8h_ab13b0ce7acc90c62cd400c3a3465cc60}\label{API__lcd_8h_ab13b0ce7acc90c62cd400c3a3465cc60} 
+\index{API\_lcd.h@{API\_lcd.h}!lcd\_iniciar@{lcd\_iniciar}}
+\index{lcd\_iniciar@{lcd\_iniciar}!API\_lcd.h@{API\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_iniciar()}{lcd\_iniciar()}}
+{\footnotesize\ttfamily void lcd\+\_\+iniciar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa la pantalla del LCD. 
+
+Esta función envía los comandos necesarios al LCD para poder inicializarlo.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__lcd_8h_a552f29803075cd1281b77739e76bb94b}\label{API__lcd_8h_a552f29803075cd1281b77739e76bb94b} 
+\index{API\_lcd.h@{API\_lcd.h}!lcd\_limpiar@{lcd\_limpiar}}
+\index{lcd\_limpiar@{lcd\_limpiar}!API\_lcd.h@{API\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_limpiar()}{lcd\_limpiar()}}
+{\footnotesize\ttfamily void lcd\+\_\+limpiar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Limpia la pantalla del LCD. 
+
+Esta función envía un comando al LCD para limpiar la pantalla y espera un tiempo para asegurarse de que la operación se complete.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__lcd_8h_aa33113f1b13552bd72cd5e4487b954c9}\label{API__lcd_8h_aa33113f1b13552bd72cd5e4487b954c9} 
+\index{API\_lcd.h@{API\_lcd.h}!lcd\_luz\_fondo@{lcd\_luz\_fondo}}
+\index{lcd\_luz\_fondo@{lcd\_luz\_fondo}!API\_lcd.h@{API\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_luz\_fondo()}{lcd\_luz\_fondo()}}
+{\footnotesize\ttfamily void lcd\+\_\+luz\+\_\+fondo (\begin{DoxyParamCaption}\item[{bool}]{estado }\end{DoxyParamCaption})}
+
+
+
+Controla el estado de la luz de fondo del LCD. 
+
+Esta función permite encender o apagar la luz de fondo del LCD según el valor del parámetro \textquotesingle{}estado\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em estado} & Indica si se debe encender (true) o apagar (false) la luz de fondo.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__lcd_8h_ad300f3e1cf5379308b58a0215c80e188}\label{API__lcd_8h_ad300f3e1cf5379308b58a0215c80e188} 
+\index{API\_lcd.h@{API\_lcd.h}!lcd\_ubicar@{lcd\_ubicar}}
+\index{lcd\_ubicar@{lcd\_ubicar}!API\_lcd.h@{API\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_ubicar()}{lcd\_ubicar()}}
+{\footnotesize\ttfamily void lcd\+\_\+ubicar (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{fila,  }\item[{uint8\+\_\+t}]{columna }\end{DoxyParamCaption})}
+
+
+
+Ubica el cursor en una posición específica del LCD. 
+
+Esta función ubica el cursor en la posición indicada por los parámetros \textquotesingle{}fila\textquotesingle{} y \textquotesingle{}columna\textquotesingle{} del LCD.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fila} & Número de fila donde se desea ubicar el cursor. \\
+\hline
+{\em columna} & Número de columna donde se desea ubicar el cursor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}

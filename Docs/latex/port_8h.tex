@@ -1,0 +1,209 @@
+\doxysection{Referencia del archivo Drivers/\+API/\+Inc/port.h}
+\hypertarget{port_8h}{}\label{port_8h}\index{Drivers/API/Inc/port.h@{Drivers/API/Inc/port.h}}
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{port_8h_a5f973c1c68f41f0ed1682ce8452d455a}{ADC\+\_\+iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa el módulo ADC. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{port_8h_aaa96f072b90f31905ea71614adba466c}{ADC\+\_\+obtener\+\_\+datos}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene datos del módulo ADC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{port_8h_a5f836669eb1a0345bfd7ca8127aff589}{I2\+C\+\_\+iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa el módulo I2C. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{port_8h_afb660a5107d07aa0da5d0c32632fd3f8}{I2\+C\+\_\+transmitir}} (uint16\+\_\+t direccion, uint8\+\_\+t \texorpdfstring{$\ast$}{*}dato, uint8\+\_\+t tamano, uint8\+\_\+t tiempo\+\_\+espera)
+\begin{DoxyCompactList}\small\item\em Transmite un dato a través del bus I2C. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{port_8h_adb94b820d8294d7437abee5a1ccd9dac}{I2\+C\+\_\+recibir}} (uint16\+\_\+t direccion, uint8\+\_\+t \texorpdfstring{$\ast$}{*}dato, uint8\+\_\+t tamano, uint8\+\_\+t tiempo\+\_\+espera)
+\begin{DoxyCompactList}\small\item\em Transmite un dato a través del bus I2C. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{port_8h_acb2f50f4e5d4033a043fbfb2873ea7cc}{I2\+C\+\_\+leer\+\_\+memoria}} (uint16\+\_\+t direccion, uint16\+\_\+t direccion\+\_\+memoria, uint8\+\_\+t \texorpdfstring{$\ast$}{*}dato, uint8\+\_\+t tamano, uint8\+\_\+t tiempo\+\_\+espera)
+\begin{DoxyCompactList}\small\item\em Lee una dirección de memoria usando el bus I2C. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{port_8h_a4c92be2764a11f6aa14868331e6bf954}{esperar}} (uint32\+\_\+t tiempo)
+\begin{DoxyCompactList}\small\item\em Espera durante un período de tiempo especificado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{port_8h_ace005a4e2ab35b75fa231a4c53eb3839}{manejar\+\_\+errores}} (void)
+\begin{DoxyCompactList}\small\item\em Función que detiene la ejecución del programa en caso de error. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{port_8h_ae4a29cc52b447039df864a2d485577a8}{esperar\+\_\+ms}} (uint32\+\_\+t microsegundos)
+\begin{DoxyCompactList}\small\item\em Espera durante un período de tiempo especificado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{port_8h_a5f973c1c68f41f0ed1682ce8452d455a}\label{port_8h_a5f973c1c68f41f0ed1682ce8452d455a} 
+\index{port.h@{port.h}!ADC\_iniciar@{ADC\_iniciar}}
+\index{ADC\_iniciar@{ADC\_iniciar}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_iniciar()}{ADC\_iniciar()}}
+{\footnotesize\ttfamily void ADC\+\_\+iniciar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa el módulo ADC. 
+
+Esta función realiza las operaciones necesarias para iniciar el módulo ADC.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{port_8h_aaa96f072b90f31905ea71614adba466c}\label{port_8h_aaa96f072b90f31905ea71614adba466c} 
+\index{port.h@{port.h}!ADC\_obtener\_datos@{ADC\_obtener\_datos}}
+\index{ADC\_obtener\_datos@{ADC\_obtener\_datos}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_obtener\_datos()}{ADC\_obtener\_datos()}}
+{\footnotesize\ttfamily uint32\+\_\+t ADC\+\_\+obtener\+\_\+datos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene datos del módulo ADC. 
+
+Esta función realiza las operaciones necesarias para obtener datos del módulo ADC.
+
+\begin{DoxyReturn}{Devuelve}
+Valor obtenido del módulo ADC. 
+\end{DoxyReturn}
+\Hypertarget{port_8h_a4c92be2764a11f6aa14868331e6bf954}\label{port_8h_a4c92be2764a11f6aa14868331e6bf954} 
+\index{port.h@{port.h}!esperar@{esperar}}
+\index{esperar@{esperar}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{esperar()}{esperar()}}
+{\footnotesize\ttfamily void esperar (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tiempo }\end{DoxyParamCaption})}
+
+
+
+Espera durante un período de tiempo especificado. 
+
+Esta función realiza una espera durante el tiempo especificado. La unidad de tiempo utilizada es de milisegundos.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em tiempo} & El tiempo a esperar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{port_8h_ae4a29cc52b447039df864a2d485577a8}\label{port_8h_ae4a29cc52b447039df864a2d485577a8} 
+\index{port.h@{port.h}!esperar\_ms@{esperar\_ms}}
+\index{esperar\_ms@{esperar\_ms}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{esperar\_ms()}{esperar\_ms()}}
+{\footnotesize\ttfamily void esperar\+\_\+ms (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{microsegundos }\end{DoxyParamCaption})}
+
+
+
+Espera durante un período de tiempo especificado. 
+
+Esta función realiza una espera durante el tiempo especificado. La unidad de tiempo utilizada es de microsegundos.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em microsegundos} & El tiempo a esperar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{port_8h_a5f836669eb1a0345bfd7ca8127aff589}\label{port_8h_a5f836669eb1a0345bfd7ca8127aff589} 
+\index{port.h@{port.h}!I2C\_iniciar@{I2C\_iniciar}}
+\index{I2C\_iniciar@{I2C\_iniciar}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_iniciar()}{I2C\_iniciar()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+iniciar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa el módulo I2C. 
+
+Esta función realiza las operaciones necesarias para iniciar el módulo I2C.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+Configura el filtro analogico
+
+Configura el filtro digital\Hypertarget{port_8h_acb2f50f4e5d4033a043fbfb2873ea7cc}\label{port_8h_acb2f50f4e5d4033a043fbfb2873ea7cc} 
+\index{port.h@{port.h}!I2C\_leer\_memoria@{I2C\_leer\_memoria}}
+\index{I2C\_leer\_memoria@{I2C\_leer\_memoria}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_leer\_memoria()}{I2C\_leer\_memoria()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+leer\+\_\+memoria (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{direccion,  }\item[{uint16\+\_\+t}]{direccion\+\_\+memoria,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{dato,  }\item[{uint8\+\_\+t}]{tamano,  }\item[{uint8\+\_\+t}]{tiempo\+\_\+espera }\end{DoxyParamCaption})}
+
+
+
+Lee una dirección de memoria usando el bus I2C. 
+
+Esta función recibe en \textquotesingle{}dato\textquotesingle{} datos de una dirección de memoria a través del bus I2C del dispositivo con la \textquotesingle{}dirección\textquotesingle{} especificada. El parámetro \textquotesingle{}tamano\textquotesingle{} indica la cantidad de bytes a recibir.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em direccion} & La dirección del dispositivo. \\
+\hline
+{\em direccion\+\_\+memoria} & La direccion de memoria dentro del dispositivo. \\
+\hline
+{\em dato} & Almacena el dato que se recibe a través del bus I2C. \\
+\hline
+{\em tamano} & La cantidad de bytes a recibir. \\
+\hline
+{\em tiempo\+\_\+espera} & El tiempo de espera después de la transmisión.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{port_8h_adb94b820d8294d7437abee5a1ccd9dac}\label{port_8h_adb94b820d8294d7437abee5a1ccd9dac} 
+\index{port.h@{port.h}!I2C\_recibir@{I2C\_recibir}}
+\index{I2C\_recibir@{I2C\_recibir}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_recibir()}{I2C\_recibir()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+recibir (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{direccion,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{dato,  }\item[{uint8\+\_\+t}]{tamano,  }\item[{uint8\+\_\+t}]{tiempo\+\_\+espera }\end{DoxyParamCaption})}
+
+
+
+Transmite un dato a través del bus I2C. 
+
+Esta función recibe en \textquotesingle{}dato\textquotesingle{} datos a través del bus I2C de la \textquotesingle{}dirección\textquotesingle{} especificada. El parámetro \textquotesingle{}tamano\textquotesingle{} indica la cantidad de bytes a recibir.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em direccion} & La dirección de lectura. \\
+\hline
+{\em dato} & Almacena el dato que se recibe a través del bus I2C. \\
+\hline
+{\em tamano} & La cantidad de bytes a recibir. \\
+\hline
+{\em tiempo\+\_\+espera} & El tiempo de espera después de la transmisión.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{port_8h_afb660a5107d07aa0da5d0c32632fd3f8}\label{port_8h_afb660a5107d07aa0da5d0c32632fd3f8} 
+\index{port.h@{port.h}!I2C\_transmitir@{I2C\_transmitir}}
+\index{I2C\_transmitir@{I2C\_transmitir}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_transmitir()}{I2C\_transmitir()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+transmitir (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{direccion,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{dato,  }\item[{uint8\+\_\+t}]{tamano,  }\item[{uint8\+\_\+t}]{tiempo\+\_\+espera }\end{DoxyParamCaption})}
+
+
+
+Transmite un dato a través del bus I2C. 
+
+Esta función envía el \textquotesingle{}dato\textquotesingle{} proporcionado a través del bus I2C a la \textquotesingle{}dirección\textquotesingle{} especificada. El parámetro \textquotesingle{}tamano\textquotesingle{} indica la cantidad de bytes a transmitir, y \textquotesingle{}tiempo\+Espera\textquotesingle{} representa el tiempo que la función debería esperar después de la transmisión para permitir que el bus I2C se estabilice o realizar otras tareas necesarias.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em direccion} & La dirección de destino. \\
+\hline
+{\em dato} & El dato que se va a transmitir a través del bus I2C. \\
+\hline
+{\em tamano} & La cantidad de bytes a transmitir. \\
+\hline
+{\em tiempo\+\_\+espera} & El tiempo de espera después de la transmisión.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{port_8h_ace005a4e2ab35b75fa231a4c53eb3839}\label{port_8h_ace005a4e2ab35b75fa231a4c53eb3839} 
+\index{port.h@{port.h}!manejar\_errores@{manejar\_errores}}
+\index{manejar\_errores@{manejar\_errores}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{manejar\_errores()}{manejar\_errores()}}
+{\footnotesize\ttfamily void manejar\+\_\+errores (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Función que detiene la ejecución del programa en caso de error. 
+
+Esta función se llama cuando se detecta una situación de error en el programa. En caso de detectarse un error se detiene la ejecución del programa.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}

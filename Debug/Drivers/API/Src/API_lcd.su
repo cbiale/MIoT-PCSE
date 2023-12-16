@@ -1,0 +1,7 @@
+../Drivers/API/Src/API_lcd.c:74:6:lcd_iniciar	8	static
+../Drivers/API/Src/API_lcd.c:95:6:lcd_ubicar	24	static
+../Drivers/API/Src/API_lcd.c:114:6:lcd_limpiar	8	static
+../Drivers/API/Src/API_lcd.c:120:6:lcd_escribir_string	16	static
+../Drivers/API/Src/API_lcd.c:127:6:lcd_luz_fondo	16	static
+../Drivers/API/Src/API_lcd.c:137:13:lcd_escribir_nibble	24	static
+../Drivers/API/Src/API_lcd.c:148:13:lcd_escribir_codigo	24	static

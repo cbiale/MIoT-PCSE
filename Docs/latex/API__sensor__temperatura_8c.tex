@@ -1,0 +1,228 @@
+\doxysection{Referencia del archivo Drivers/\+API/\+Src/\+API\+\_\+sensor\+\_\+temperatura.c}
+\hypertarget{API__sensor__temperatura_8c}{}\label{API__sensor__temperatura_8c}\index{Drivers/API/Src/API\_sensor\_temperatura.c@{Drivers/API/Src/API\_sensor\_temperatura.c}}
+{\ttfamily \#include $<$API\+\_\+sensor\+\_\+temperatura.\+h$>$}\newline
+\doxysubsubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structestado__interno__t}{estado\+\_\+interno\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Estructura que representa el estado interno de la interfaz en el sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{API__sensor__temperatura_8c_a603af27720fb837bb5774c202641a671}{SENSOR\+\_\+\+TEMPERATURA\+\_\+\+CONTROL\+\_\+\+LECTURAS}}~5
+\item 
+\#define \mbox{\hyperlink{API__sensor__temperatura_8c_ab2acc5107b875406d4f33cfff33fb334}{SENSOR\+\_\+\+TEMPERATURA\+\_\+\+ESPERA\+\_\+\+ENTRE\+\_\+\+LECTURAS}}~3000
+\item 
+\#define \mbox{\hyperlink{API__sensor__temperatura_8c_abe6ddb2039baaba36ee5fb6c5e6271fd}{SENSOR\+\_\+\+TEMPERATURA\+\_\+\+PENDIENTE\+\_\+\+PROMEDIO}}~0.\+0025
+\item 
+\#define \mbox{\hyperlink{API__sensor__temperatura_8c_aa5e978cc37e92972df157bf026f07b38}{SENSOR\+\_\+\+TEMPERATURA\+\_\+\+VOLTAJE\+\_\+25\+\_\+\+GRADOS}}~0.\+76
+\item 
+\#define \mbox{\hyperlink{API__sensor__temperatura_8c_ac6677ff3935dff58e16d0d4a71210330}{SENSOR\+\_\+\+TEMPERATURA\+\_\+\+ADC\+\_\+\+MAXIMO}}~4095
+\item 
+\#define \mbox{\hyperlink{API__sensor__temperatura_8c_a80ab5981761f3a9e64fedcb180bbebc4}{SENSOR\+\_\+\+TEMPERATURA\+\_\+\+VOLTAJE\+\_\+\+REFERENCIA}}~3.\+3
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumeraciones}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{API__sensor__temperatura_8c_a2a050a3e5af317378704c696772c25fc}{estado\+\_\+sensor\+\_\+temperatura\+\_\+t}} \{ \mbox{\hyperlink{API__sensor__temperatura_8c_a2a050a3e5af317378704c696772c25fcada8d36ecf9d93d02b398687de8bb507f}{ESPERA}}
+, \mbox{\hyperlink{API__sensor__temperatura_8c_a2a050a3e5af317378704c696772c25fca9e28b4f0c923320d7247f5b48ebe4b30}{LECTURA}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeración que representa los estados del sensor de temperatura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{API__sensor__temperatura_8c_aa2f202b3be88139d2c6146f568166d47}{sensor\+\_\+temperatura\+\_\+realizar\+\_\+lectura}} ()
+\begin{DoxyCompactList}\small\item\em Realiza una lectura del sensor de temperatura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__sensor__temperatura_8c_a9202876d2c0ec54020b1f2b2e5a798df}{sensor\+\_\+temperatura\+\_\+iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Inicia el sensor de temperatura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{API__sensor__temperatura_8c_ad8212b010fbed300db174c84d1ef31d3}{sensor\+\_\+temperatura\+\_\+actualizar}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene los datos del sensor y deja disponible los valores obtenidos. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{API__sensor__temperatura_8c_adfdbb6957889d01e2bc1f55999929cf7}{sensor\+\_\+temperatura\+\_\+obtener\+\_\+temperatura}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la temperatura actual desde el sensor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{API__sensor__temperatura_8c_ab9786aab5c7b7d829916862f7a088107}{sensor\+\_\+temperatura\+\_\+nueva\+\_\+lectura}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la secuencia de lectura del sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{API__sensor__temperatura_8c_a2a050a3e5af317378704c696772c25fc}{estado\+\_\+sensor\+\_\+temperatura\+\_\+t}} \mbox{\hyperlink{API__sensor__temperatura_8c_a9498597989a6e68b83995413873a3e57}{estado}}
+\begin{DoxyCompactList}\small\item\em Estado actual del sensor de temperatura. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structestado__interno__t}{estado\+\_\+interno\+\_\+t}} \mbox{\hyperlink{API__sensor__temperatura_8c_a8730946f312108f952e841e6a0558134}{estado\+\_\+interno}}
+\begin{DoxyCompactList}\small\item\em Estado interno actual del sensor de temperatura. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} \mbox{\hyperlink{API__sensor__temperatura_8c_a83e15e6dff7d58a66ba46ac684240c34}{espera}}
+\begin{DoxyCompactList}\small\item\em Maneja la espera entre lecturas del sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de «define»}
+\Hypertarget{API__sensor__temperatura_8c_ac6677ff3935dff58e16d0d4a71210330}\label{API__sensor__temperatura_8c_ac6677ff3935dff58e16d0d4a71210330} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!SENSOR\_TEMPERATURA\_ADC\_MAXIMO@{SENSOR\_TEMPERATURA\_ADC\_MAXIMO}}
+\index{SENSOR\_TEMPERATURA\_ADC\_MAXIMO@{SENSOR\_TEMPERATURA\_ADC\_MAXIMO}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_TEMPERATURA\_ADC\_MAXIMO}{SENSOR\_TEMPERATURA\_ADC\_MAXIMO}}
+{\footnotesize\ttfamily \#define SENSOR\+\_\+\+TEMPERATURA\+\_\+\+ADC\+\_\+\+MAXIMO~4095}
+
+\Hypertarget{API__sensor__temperatura_8c_a603af27720fb837bb5774c202641a671}\label{API__sensor__temperatura_8c_a603af27720fb837bb5774c202641a671} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!SENSOR\_TEMPERATURA\_CONTROL\_LECTURAS@{SENSOR\_TEMPERATURA\_CONTROL\_LECTURAS}}
+\index{SENSOR\_TEMPERATURA\_CONTROL\_LECTURAS@{SENSOR\_TEMPERATURA\_CONTROL\_LECTURAS}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_TEMPERATURA\_CONTROL\_LECTURAS}{SENSOR\_TEMPERATURA\_CONTROL\_LECTURAS}}
+{\footnotesize\ttfamily \#define SENSOR\+\_\+\+TEMPERATURA\+\_\+\+CONTROL\+\_\+\+LECTURAS~5}
+
+\Hypertarget{API__sensor__temperatura_8c_ab2acc5107b875406d4f33cfff33fb334}\label{API__sensor__temperatura_8c_ab2acc5107b875406d4f33cfff33fb334} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!SENSOR\_TEMPERATURA\_ESPERA\_ENTRE\_LECTURAS@{SENSOR\_TEMPERATURA\_ESPERA\_ENTRE\_LECTURAS}}
+\index{SENSOR\_TEMPERATURA\_ESPERA\_ENTRE\_LECTURAS@{SENSOR\_TEMPERATURA\_ESPERA\_ENTRE\_LECTURAS}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_TEMPERATURA\_ESPERA\_ENTRE\_LECTURAS}{SENSOR\_TEMPERATURA\_ESPERA\_ENTRE\_LECTURAS}}
+{\footnotesize\ttfamily \#define SENSOR\+\_\+\+TEMPERATURA\+\_\+\+ESPERA\+\_\+\+ENTRE\+\_\+\+LECTURAS~3000}
+
+\Hypertarget{API__sensor__temperatura_8c_abe6ddb2039baaba36ee5fb6c5e6271fd}\label{API__sensor__temperatura_8c_abe6ddb2039baaba36ee5fb6c5e6271fd} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!SENSOR\_TEMPERATURA\_PENDIENTE\_PROMEDIO@{SENSOR\_TEMPERATURA\_PENDIENTE\_PROMEDIO}}
+\index{SENSOR\_TEMPERATURA\_PENDIENTE\_PROMEDIO@{SENSOR\_TEMPERATURA\_PENDIENTE\_PROMEDIO}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_TEMPERATURA\_PENDIENTE\_PROMEDIO}{SENSOR\_TEMPERATURA\_PENDIENTE\_PROMEDIO}}
+{\footnotesize\ttfamily \#define SENSOR\+\_\+\+TEMPERATURA\+\_\+\+PENDIENTE\+\_\+\+PROMEDIO~0.\+0025}
+
+\Hypertarget{API__sensor__temperatura_8c_aa5e978cc37e92972df157bf026f07b38}\label{API__sensor__temperatura_8c_aa5e978cc37e92972df157bf026f07b38} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!SENSOR\_TEMPERATURA\_VOLTAJE\_25\_GRADOS@{SENSOR\_TEMPERATURA\_VOLTAJE\_25\_GRADOS}}
+\index{SENSOR\_TEMPERATURA\_VOLTAJE\_25\_GRADOS@{SENSOR\_TEMPERATURA\_VOLTAJE\_25\_GRADOS}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_TEMPERATURA\_VOLTAJE\_25\_GRADOS}{SENSOR\_TEMPERATURA\_VOLTAJE\_25\_GRADOS}}
+{\footnotesize\ttfamily \#define SENSOR\+\_\+\+TEMPERATURA\+\_\+\+VOLTAJE\+\_\+25\+\_\+\+GRADOS~0.\+76}
+
+\Hypertarget{API__sensor__temperatura_8c_a80ab5981761f3a9e64fedcb180bbebc4}\label{API__sensor__temperatura_8c_a80ab5981761f3a9e64fedcb180bbebc4} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!SENSOR\_TEMPERATURA\_VOLTAJE\_REFERENCIA@{SENSOR\_TEMPERATURA\_VOLTAJE\_REFERENCIA}}
+\index{SENSOR\_TEMPERATURA\_VOLTAJE\_REFERENCIA@{SENSOR\_TEMPERATURA\_VOLTAJE\_REFERENCIA}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_TEMPERATURA\_VOLTAJE\_REFERENCIA}{SENSOR\_TEMPERATURA\_VOLTAJE\_REFERENCIA}}
+{\footnotesize\ttfamily \#define SENSOR\+\_\+\+TEMPERATURA\+\_\+\+VOLTAJE\+\_\+\+REFERENCIA~3.\+3}
+
+
+
+\doxysubsection{Documentación de enumeraciones}
+\Hypertarget{API__sensor__temperatura_8c_a2a050a3e5af317378704c696772c25fc}\label{API__sensor__temperatura_8c_a2a050a3e5af317378704c696772c25fc} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!estado\_sensor\_temperatura\_t@{estado\_sensor\_temperatura\_t}}
+\index{estado\_sensor\_temperatura\_t@{estado\_sensor\_temperatura\_t}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{estado\_sensor\_temperatura\_t}{estado\_sensor\_temperatura\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{API__sensor__temperatura_8c_a2a050a3e5af317378704c696772c25fc}{estado\+\_\+sensor\+\_\+temperatura\+\_\+t}}}
+
+
+
+Enumeración que representa los estados del sensor de temperatura. 
+
+Define los posibles estados del sensor ficticio, que incluyen "{}\+ESPERA"{} y "{}\+LECTURA"{}. \begin{DoxyEnumFields}{Valores de enumeraciones}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ESPERA@{ESPERA}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!ESPERA@{ESPERA}}}\Hypertarget{API__sensor__temperatura_8c_a2a050a3e5af317378704c696772c25fcada8d36ecf9d93d02b398687de8bb507f}\label{API__sensor__temperatura_8c_a2a050a3e5af317378704c696772c25fcada8d36ecf9d93d02b398687de8bb507f} 
+ESPERA&Estado de espera del sensor de temperatura. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LECTURA@{LECTURA}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!LECTURA@{LECTURA}}}\Hypertarget{API__sensor__temperatura_8c_a2a050a3e5af317378704c696772c25fca9e28b4f0c923320d7247f5b48ebe4b30}\label{API__sensor__temperatura_8c_a2a050a3e5af317378704c696772c25fca9e28b4f0c923320d7247f5b48ebe4b30} 
+LECTURA&Estado de lectura del sensor de temperatura. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{API__sensor__temperatura_8c_ad8212b010fbed300db174c84d1ef31d3}\label{API__sensor__temperatura_8c_ad8212b010fbed300db174c84d1ef31d3} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!sensor\_temperatura\_actualizar@{sensor\_temperatura\_actualizar}}
+\index{sensor\_temperatura\_actualizar@{sensor\_temperatura\_actualizar}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{sensor\_temperatura\_actualizar()}{sensor\_temperatura\_actualizar()}}
+{\footnotesize\ttfamily void sensor\+\_\+temperatura\+\_\+actualizar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene los datos del sensor y deja disponible los valores obtenidos. 
+
+Realiza las operaciones necesarias para obtener los datos del sensor y actualiza las variables que contienen los datos de temperatura.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__sensor__temperatura_8c_a9202876d2c0ec54020b1f2b2e5a798df}\label{API__sensor__temperatura_8c_a9202876d2c0ec54020b1f2b2e5a798df} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!sensor\_temperatura\_iniciar@{sensor\_temperatura\_iniciar}}
+\index{sensor\_temperatura\_iniciar@{sensor\_temperatura\_iniciar}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{sensor\_temperatura\_iniciar()}{sensor\_temperatura\_iniciar()}}
+{\footnotesize\ttfamily void sensor\+\_\+temperatura\+\_\+iniciar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia el sensor de temperatura. 
+
+Realiza las operaciones necesarias para iniciar el sensor de temperatura.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+\Hypertarget{API__sensor__temperatura_8c_ab9786aab5c7b7d829916862f7a088107}\label{API__sensor__temperatura_8c_ab9786aab5c7b7d829916862f7a088107} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!sensor\_temperatura\_nueva\_lectura@{sensor\_temperatura\_nueva\_lectura}}
+\index{sensor\_temperatura\_nueva\_lectura@{sensor\_temperatura\_nueva\_lectura}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{sensor\_temperatura\_nueva\_lectura()}{sensor\_temperatura\_nueva\_lectura()}}
+{\footnotesize\ttfamily uint8\+\_\+t sensor\+\_\+temperatura\+\_\+nueva\+\_\+lectura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene la secuencia de lectura del sensor. 
+
+Retorna la secuencia de lectura del sensor, se usa para controlar si hay una nueva lectura.
+
+\begin{DoxyReturn}{Devuelve}
+Secuencia de lectura actual. 
+\end{DoxyReturn}
+\Hypertarget{API__sensor__temperatura_8c_adfdbb6957889d01e2bc1f55999929cf7}\label{API__sensor__temperatura_8c_adfdbb6957889d01e2bc1f55999929cf7} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!sensor\_temperatura\_obtener\_temperatura@{sensor\_temperatura\_obtener\_temperatura}}
+\index{sensor\_temperatura\_obtener\_temperatura@{sensor\_temperatura\_obtener\_temperatura}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{sensor\_temperatura\_obtener\_temperatura()}{sensor\_temperatura\_obtener\_temperatura()}}
+{\footnotesize\ttfamily float sensor\+\_\+temperatura\+\_\+obtener\+\_\+temperatura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene la temperatura actual desde el sensor. 
+
+Retorna la temperatura actual medida por el sensor.
+
+\begin{DoxyReturn}{Devuelve}
+Temperatura actual en grados Celsius (float). 
+\end{DoxyReturn}
+\Hypertarget{API__sensor__temperatura_8c_aa2f202b3be88139d2c6146f568166d47}\label{API__sensor__temperatura_8c_aa2f202b3be88139d2c6146f568166d47} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!sensor\_temperatura\_realizar\_lectura@{sensor\_temperatura\_realizar\_lectura}}
+\index{sensor\_temperatura\_realizar\_lectura@{sensor\_temperatura\_realizar\_lectura}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{sensor\_temperatura\_realizar\_lectura()}{sensor\_temperatura\_realizar\_lectura()}}
+{\footnotesize\ttfamily static void sensor\+\_\+temperatura\+\_\+realizar\+\_\+lectura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Realiza una lectura del sensor de temperatura. 
+
+valor 
+
+Esta obtiene usando ADC una lectura del sensor de temperatura.
+
+\begin{DoxyReturn}{Devuelve}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{API__sensor__temperatura_8c_a83e15e6dff7d58a66ba46ac684240c34}\label{API__sensor__temperatura_8c_a83e15e6dff7d58a66ba46ac684240c34} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!espera@{espera}}
+\index{espera@{espera}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{espera}{espera}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdelay__t}{delay\+\_\+t}} espera\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Maneja la espera entre lecturas del sensor. 
+
+\Hypertarget{API__sensor__temperatura_8c_a9498597989a6e68b83995413873a3e57}\label{API__sensor__temperatura_8c_a9498597989a6e68b83995413873a3e57} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!estado@{estado}}
+\index{estado@{estado}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{estado}{estado}}
+{\footnotesize\ttfamily \mbox{\hyperlink{API__sensor__temperatura_8c_a2a050a3e5af317378704c696772c25fc}{estado\+\_\+sensor\+\_\+temperatura\+\_\+t}} estado\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Estado actual del sensor de temperatura. 
+
+Representa el estado actual del sensor de temperatura en la aplicación. \Hypertarget{API__sensor__temperatura_8c_a8730946f312108f952e841e6a0558134}\label{API__sensor__temperatura_8c_a8730946f312108f952e841e6a0558134} 
+\index{API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}!estado\_interno@{estado\_interno}}
+\index{estado\_interno@{estado\_interno}!API\_sensor\_temperatura.c@{API\_sensor\_temperatura.c}}
+\doxysubsubsection{\texorpdfstring{estado\_interno}{estado\_interno}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structestado__interno__t}{estado\+\_\+interno\+\_\+t}} estado\+\_\+interno\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Estado interno actual del sensor de temperatura. 
+
+Representa el estado interno del sensor de temperatura en la aplicación. 

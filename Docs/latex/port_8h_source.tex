@@ -1,0 +1,42 @@
+\doxysection{port.\+h}
+\hypertarget{port_8h_source}{}\label{port_8h_source}\index{Drivers/API/Inc/port.h@{Drivers/API/Inc/port.h}}
+\mbox{\hyperlink{port_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ port.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Archivo\ que\ abstrae\ a\ las\ bibliotecas\ de\ la\ HAL,\ permiten\ portabilidad.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ \ Created\ on:\ Dec\ 3,\ 2023}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ cbiale}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ API\_INC\_PORT\_H\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ API\_INC\_PORT\_H\_}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32f4xx__hal_8h}{stm32f4xx\_hal.h}}"{}}\ \textcolor{comment}{//\ hal\ que\ voy\ a\ usar\ en\ el\ proyecto,\ permite\ portabilidad}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port_8h_a5f973c1c68f41f0ed1682ce8452d455a}{ADC\_iniciar}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ uint32\_t\ \mbox{\hyperlink{port_8h_aaa96f072b90f31905ea71614adba466c}{ADC\_obtener\_datos}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port_8h_a5f836669eb1a0345bfd7ca8127aff589}{I2C\_iniciar}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port_8h_afb660a5107d07aa0da5d0c32632fd3f8}{I2C\_transmitir}}\ (uint16\_t\ direccion,\ uint8\_t\ *\ dato,\ uint8\_t\ tamano,\ uint8\_t\ tiempo\_espera);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port_8h_adb94b820d8294d7437abee5a1ccd9dac}{I2C\_recibir}}(uint16\_t\ direccion,\ uint8\_t\ *\ dato,\ uint8\_t\ tamano,\ uint8\_t\ tiempo\_espera);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port_8h_acb2f50f4e5d4033a043fbfb2873ea7cc}{I2C\_leer\_memoria}}(uint16\_t\ direccion,\ uint16\_t\ direccion\_memoria,\ uint8\_t\ *dato,\ uint8\_t\ tamano,}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ uint8\_t\ tiempo\_espera);}
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port_8h_a4c92be2764a11f6aa14868331e6bf954}{esperar}}\ (uint32\_t\ tiempo);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00114\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port_8h_ace005a4e2ab35b75fa231a4c53eb3839}{manejar\_errores}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00126\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{port_8h_ae4a29cc52b447039df864a2d485577a8}{esperar\_ms}}\ (uint32\_t\ microsegundos);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ API\_INC\_PORT\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

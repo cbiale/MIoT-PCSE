@@ -1,0 +1,9 @@
+../Drivers/API/Src/port.c:30:6:manejar_errores	8	static,ignoring_inline_asm
+../Drivers/API/Src/port.c:40:6:ADC_iniciar	24	static
+../Drivers/API/Src/port.c:69:10:ADC_obtener_datos	16	static
+../Drivers/API/Src/port.c:83:6:I2C_iniciar	8	static
+../Drivers/API/Src/port.c:112:6:I2C_transmitir	24	static
+../Drivers/API/Src/port.c:121:6:I2C_recibir	24	static
+../Drivers/API/Src/port.c:130:6:I2C_leer_memoria	40	static
+../Drivers/API/Src/port.c:139:6:esperar	16	static
+../Drivers/API/Src/port.c:144:6:esperar_ms	24	static

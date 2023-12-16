@@ -1,0 +1,5 @@
+../Drivers/API/Src/API_sensor_temperatura.c:64:6:sensor_temperatura_iniciar	4	static
+../Drivers/API/Src/API_sensor_temperatura.c:71:6:sensor_temperatura_actualizar	8	static
+../Drivers/API/Src/API_sensor_temperatura.c:95:7:sensor_temperatura_obtener_temperatura	4	static
+../Drivers/API/Src/API_sensor_temperatura.c:100:9:sensor_temperatura_nueva_lectura	4	static
+../Drivers/API/Src/API_sensor_temperatura.c:113:13:sensor_temperatura_realizar_lectura	24	static

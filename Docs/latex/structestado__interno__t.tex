@@ -1,0 +1,60 @@
+\doxysection{Referencia de la estructura estado\+\_\+interno\+\_\+t}
+\hypertarget{structestado__interno__t}{}\label{structestado__interno__t}\index{estado\_interno\_t@{estado\_interno\_t}}
+
+
+Estructura que representa el estado interno de la interfaz en el sistema.  
+
+
+\doxysubsubsection*{Campos de datos}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structestado__interno__t_a873fd0b038332d91b5fc23f6a3db8f7f}{lectura\+\_\+anterior}}
+\item 
+float \mbox{\hyperlink{structestado__interno__t_a8347aeb522c9e13e9f376640fad780e7}{temperatura}}
+\begin{DoxyCompactList}\small\item\em Temperatura actual del sensor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structestado__interno__t_a23496a1d67ccc5943e47d4f54655c6c5}{nueva\+\_\+lectura}}
+\begin{DoxyCompactList}\small\item\em Bandera (en formato índice) que indica si se realizó una nueva lectura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Estructura que representa el estado interno de la interfaz en el sistema. 
+
+Estructura que representa el estado interno del sensor en el sistema.
+
+Contiene información relacionada con los últimos valores de temperatura y humedad obtenidos. Por otro lado, contiene un valor que determina la secuencia de lectura obtenida.
+
+Contiene información relacionada con la temperatura, una bandera de nueva lectura y un índice de siguiente valor a leer. 
+
+\doxysubsection{Documentación de campos}
+\Hypertarget{structestado__interno__t_a873fd0b038332d91b5fc23f6a3db8f7f}\label{structestado__interno__t_a873fd0b038332d91b5fc23f6a3db8f7f} 
+\index{estado\_interno\_t@{estado\_interno\_t}!lectura\_anterior@{lectura\_anterior}}
+\index{lectura\_anterior@{lectura\_anterior}!estado\_interno\_t@{estado\_interno\_t}}
+\doxysubsubsection{\texorpdfstring{lectura\_anterior}{lectura\_anterior}}
+{\footnotesize\ttfamily uint8\+\_\+t lectura\+\_\+anterior}
+
+\Hypertarget{structestado__interno__t_a23496a1d67ccc5943e47d4f54655c6c5}\label{structestado__interno__t_a23496a1d67ccc5943e47d4f54655c6c5} 
+\index{estado\_interno\_t@{estado\_interno\_t}!nueva\_lectura@{nueva\_lectura}}
+\index{nueva\_lectura@{nueva\_lectura}!estado\_interno\_t@{estado\_interno\_t}}
+\doxysubsubsection{\texorpdfstring{nueva\_lectura}{nueva\_lectura}}
+{\footnotesize\ttfamily uint8\+\_\+t nueva\+\_\+lectura}
+
+
+
+Bandera (en formato índice) que indica si se realizó una nueva lectura. 
+
+\Hypertarget{structestado__interno__t_a8347aeb522c9e13e9f376640fad780e7}\label{structestado__interno__t_a8347aeb522c9e13e9f376640fad780e7} 
+\index{estado\_interno\_t@{estado\_interno\_t}!temperatura@{temperatura}}
+\index{temperatura@{temperatura}!estado\_interno\_t@{estado\_interno\_t}}
+\doxysubsubsection{\texorpdfstring{temperatura}{temperatura}}
+{\footnotesize\ttfamily float temperatura}
+
+
+
+Temperatura actual del sensor. 
+
+
+
+La documentación de esta estructura está generada de los siguientes archivos\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+API/\+Src/\mbox{\hyperlink{API__interfaz_8c}{API\+\_\+interfaz.\+c}}\item 
+Drivers/\+API/\+Src/\mbox{\hyperlink{API__sensor__temperatura_8c}{API\+\_\+sensor\+\_\+temperatura.\+c}}\end{DoxyCompactItemize}
